@@ -99,12 +99,25 @@ function initBackgroundImage() {
 }
 
 // ================================
-// LENIS SMOOTH SCROLL
+// LENIS SMOOTH SCROLL (DESATIVADO - SCROLL NATIVO)
 // ================================
 function initLenis() {
-  lenis = new Lenis({ duration: 1.2, smoothWheel: true });
-  function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-  requestAnimationFrame(raf);
+  // Scroll nativo do navegador - rápido e responsivo
+  // Lenis removido para melhor experiência do usuário
+  
+  // Apenas adiciona scroll suave para links de navegação
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
 }
 
 // ================================
@@ -1062,7 +1075,7 @@ function initNavigation() {
       if (href?.startsWith('#')) {
         e.preventDefault();
         const target = document.querySelector(href);
-        if (target) lenis?.scrollTo(target);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
@@ -1084,7 +1097,7 @@ function initFAB() {
     btn.addEventListener('click', () => {
       const action = btn.dataset.action;
       if (action === 'tv') document.getElementById('tvWidget')?.classList.add('show');
-      else if (action === 'top') lenis?.scrollTo(0);
+      else if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
       fabMain?.classList.remove('active');
       fabOptions?.classList.remove('show');
     });
@@ -1126,10 +1139,10 @@ function initCommandPalette() {
       closePalette();
       
       switch (action) {
-        case 'home': lenis?.scrollTo('#hero'); break;
-        case 'about': lenis?.scrollTo('#about'); break;
-        case 'clips': lenis?.scrollTo('#clips'); break;
-        case 'schedule': lenis?.scrollTo('#schedule'); break;
+        case 'home': document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }); break;
+        case 'about': document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); break;
+        case 'clips': document.getElementById('clips')?.scrollIntoView({ behavior: 'smooth' }); break;
+        case 'schedule': document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' }); break;
         case 'tv': document.getElementById('tvWidget')?.classList.add('show'); break;
         case 'twitch': window.open('https://twitch.tv/hxadinha', '_blank'); break;
         case 'discord': window.open('https://discord.gg/hxadinha', '_blank'); break;

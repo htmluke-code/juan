@@ -517,7 +517,9 @@
   color: #6a0dad !important;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: auto; /* Scroll nativo rápido */
+}
 
 body {
   font-family: 'Outfit', sans-serif;
