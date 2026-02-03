@@ -1,527 +1,582 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline ♡ Hxadinha</title>
-    <meta name="description" content="Hxadinha — Streamer brasileira. Lives com amor, risadas e uma comunidade incrível. Vem fazer parte!">
-    <meta name="author" content="Hxadinha">
-    <meta name="theme-color" content="#7c3aed">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hxadinha.com.br">
-    <meta property="og:title" content="Hxadinha · Streamer">
-    <meta property="og:description" content="Lives incríveis, conteúdo exclusivo e uma comunidade cheia de amor. Vem fazer parte! 💖">
-    <meta property="og:image" content="https://cdn.hxadinha.com.br/eu2025.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Hxadinha">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@hxadinha">
-    <meta name="twitter:creator" content="@hxadinha">
-    <meta name="twitter:title" content="Hxadinha · Streamer">
-    <meta name="twitter:description" content="Lives incríveis, conteúdo exclusivo e uma comunidade cheia de amor. 💖">
-    <meta name="twitter:image" content="https://cdn.hxadinha.com.br/eu2025.webp">
-    
-    <!-- JSON-LD Person -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Hxadinha",
-        "alternateName": "hxadinha",
-        "url": "https://hxadinha.com.br",
-        "image": "https://cdn.hxadinha.com.br/eu2025.webp",
-        "sameAs": [
-            "https://twitch.tv/hxadinha",
-            "https://www.youtube.com/@hxadinha",
-            "https://instagram.com/hxadinha",
-            "https://twitter.com/hxadinha",
-            "https://tiktok.com/@hxadinha",
-            "https://discord.gg/hxadinha"
-        ],
-        "jobTitle": "Content Creator & Streamer",
-        "description": "Streamer brasileira com lives cheias de amor, risadas e uma comunidade incrível."
-    }
-    </script>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiSHhhZGluaGEiLCJzaG9ydF9uYW1lIjoiSHhhZGluaGEiLCJzdGFydF91cmwiOiIvIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBhMGEwYSIsInRoZW1lX2NvbG9yIjoiI2U5MWU2MyIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIyYVdWM1FtOTRQU0l3SURBZ01UQXdJREV3TUNJZ2VHMXNibk05SW1oMGRIQTZMeTkzZDNjdWR6TXViM0puTHpJd01EQXZjM1puSWo0OFkybHlZMnhsSUdONFBTSTFNQ0lnWTNrOUlqVXdJaUJ5UFNJME5TSWdabWxzYkQwaUkyVTVNV1UyTXlJdlBqd3ZjM1puUGc9PSIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIn1dfQ==">
-    
-    <!-- Favicon -->
-    <link rel="icon" id="favicon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0iIzdjM2FlZCIvPjx0ZXh0IHg9IjUwIiB5PSI2MiIgZm9udC1zaXplPSI0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJzZXJpZiI+4pmlPC90ZXh0Pjwvc3ZnPg==">
-    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0iIzdjM2FlZCIvPjwvc3ZnPg==">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hxadinha ♡ TV | Streamer Profissional</title>
+  <meta name="description" content="Página oficial da streamer hxadinha - Gaymer de Roça - Twitch Affiliate">
+  <meta name="theme-color" content="#9146FF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="hxadinha ♡ TV">
+  <meta property="og:description" content="Gaymer de Roça • Streamer Brasileira">
+  <meta property="og:image" content="https://cdn.hxadinha.com.br/eu2025.webp">
+  <meta property="og:url" content="https://hxadinha.com.br">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hxadinha">
+  
+  <!-- Fonts & CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-content">
-            <div class="preloader-logo">
-                <span class="preloader-heart">♡</span>
-                <span class="preloader-name">hxadinha</span>
-            </div>
-            <div class="preloader-bar">
-                <div class="preloader-progress" id="preloaderProgress"></div>
-            </div>
-            <div class="preloader-percent" id="preloaderPercent">0%</div>
-        </div>
+
+  <!-- BACKGROUND IMAGE - SETUP STREAMER -->
+  <div class="bg-image"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Loading Screen PRO -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <span class="loader-heart">♡</span>
+        <span class="loader-name">hxadinha</span>
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-status" id="loaderStatus">Conectando à Twitch...</p>
     </div>
+  </div>
 
-    <!-- Background -->
-    <div class="background" id="background">
-        <div class="background-image" id="bgImage"></div>
-        <div class="background-overlay"></div>
-        <div class="background-noise"></div>
-        <div class="background-gradient"></div>
+  <!-- Command Palette (Ctrl+K) -->
+  <div class="command-palette" id="commandPalette">
+    <div class="palette-backdrop" id="paletteBackdrop"></div>
+    <div class="palette-modal">
+      <div class="palette-header">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="paletteInput" placeholder="Buscar ações..." autocomplete="off">
+        <kbd>ESC</kbd>
+      </div>
+      <div class="palette-results" id="paletteResults">
+        <div class="palette-group">
+          <span class="palette-group-title">Navegação</span>
+          <button class="palette-item" data-action="home"><span>🏠</span> Ir para Home</button>
+          <button class="palette-item" data-action="about"><span>👤</span> Sobre Mim</button>
+          <button class="palette-item" data-action="clips"><span>🎬</span> Ver Clips</button>
+          <button class="palette-item" data-action="schedule"><span>📅</span> Agenda</button>
+        </div>
+        <div class="palette-group">
+          <span class="palette-group-title">Ações</span>
+          <button class="palette-item" data-action="tv"><span>📺</span> Abrir Mini TV</button>
+          <button class="palette-item" data-action="twitch"><span>💜</span> Ir para Twitch</button>
+          <button class="palette-item" data-action="discord"><span>💬</span> Entrar no Discord</button>
+          <button class="palette-item" data-action="theme"><span>🌓</span> Alternar Tema</button>
+        </div>
+      </div>
+      <div class="palette-footer">
+        <span><kbd>↑↓</kbd> navegar</span>
+        <span><kbd>↵</kbd> selecionar</span>
+        <span><kbd>ESC</kbd> fechar</span>
+      </div>
     </div>
+  </div>
 
-    <!-- Particles -->
-    <div class="particles" id="particles"></div>
+  <!-- Live Banner -->
+  <div class="live-banner" id="liveBanner">
+    <div class="live-pulse"></div>
+    <span class="live-icon">🔴</span>
+    <span class="live-text">AO VIVO AGORA:</span>
+    <span class="live-title" id="streamTitle">Carregando...</span>
+    <span class="live-game" id="streamGame"></span>
+    <span class="live-viewers"><span id="viewerCount">0</span> assistindo</span>
+    <span class="live-uptime" id="streamUptime">00:00:00</span>
+    <a href="https://twitch.tv/hxadinha" target="_blank" class="live-btn">
+      <span>Assistir</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
 
-    <!-- Main Content -->
-    <main class="main" id="main">
-        <!-- Live Badge -->
-        <a href="https://twitch.tv/hxadinha" class="live-badge" id="liveBadge" target="_blank" rel="noopener noreferrer" data-sound="click">
-            <span class="live-pulse"></span>
-            <span class="live-dot"></span>
-            <span class="live-text">AO VIVO</span>
-            <span class="live-viewers" id="liveViewers"></span>
-            <span class="live-time" id="liveTime"></span>
-        </a>
-
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <div class="profile-container" id="profileContainer">
-                <div class="profile-glow"></div>
-                <div class="profile-ring"></div>
-                <img 
-                    src="https://cdn.hxadinha.com.br/eu2025.webp" 
-                    alt="Hxadinha" 
-                    class="profile-photo"
-                    id="profilePhoto"
-                    data-lightbox="true"
-                    onerror="this.src='https://static-cdn.jtvnw.net/jtv_user_pictures/a39cff0e-ae0c-42c9-89b4-247f41766044-profile_image-300x300.png'"
-                >
-                <div class="profile-reflection"></div>
-            </div>
+  <!-- Premium Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon"><span class="logo-heart">♡</span></div>
+        <div class="logo-text">
+          <span class="logo-name">hxadinha</span>
+          <span class="logo-tag">STREAMER</span>
         </div>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link active"><span>Home</span></a></li>
+        <li><a href="#about" class="nav-link"><span>Sobre</span></a></li>
+        <li><a href="#clips" class="nav-link"><span>Clips</span></a></li>
+        <li><a href="#schedule" class="nav-link"><span>Agenda</span></a></li>
+        <li><a href="#supporters" class="nav-link"><span>Top Fans</span></a></li>
+        <li><a href="https://hxadinha.com.br/loja" target="_blank" class="nav-link nav-store"><span>🛒 Loja</span></a></li>
+      </ul>
 
-        <!-- Name & Bio -->
-        <h1 class="streamer-name">Hxadinha</h1>
-        <p class="streamer-tagline">Streamer · Content Creator · Sua Crush 💖</p>
-        <p class="streamer-bio">Lives com muito amor, risadas e uma comunidade incrível.<br>Vem fazer parte dessa família!</p>
-
-        <!-- Stats -->
-        <div class="stats">
-            <div class="stat" data-sound="hover">
-                <div class="stat-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                </div>
-                <div class="stat-value" id="followerCount">---</div>
-                <div class="stat-label">Seguidores</div>
-            </div>
-            <div class="stat" data-sound="hover">
-                <div class="stat-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-                </div>
-                <div class="stat-value" id="totalViews">---</div>
-                <div class="stat-label">Visualizações</div>
-            </div>
-            <div class="stat" data-sound="hover">
-                <div class="stat-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
-                </div>
-                <div class="stat-value" id="subCount">VIP</div>
-                <div class="stat-label">Status</div>
-            </div>
-        </div>
-
-        <!-- Stream Info -->
-        <div class="stream-info" id="streamInfo">
-            <div class="stream-info-inner">
-                <div class="stream-category" id="streamCategory">Carregando...</div>
-                <div class="stream-title" id="streamTitle">Aguardando dados da live...</div>
-            </div>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="actions">
-            <a href="https://twitch.tv/hxadinha" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-sound="click">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
-                <span>Assistir na Twitch</span>
-                <div class="btn-shine"></div>
-            </a>
-            <button class="btn btn-secondary" id="notifyBtn" data-sound="click">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                <span>Notificar-me</span>
-            </button>
-        </div>
-
-        <!-- Schedule Section -->
-        <section class="schedule-section">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-icon">📅</span>
-                    Programação Semanal
-                </h2>
-                <p class="section-subtitle">Confira os horários das lives e não perca nenhum momento</p>
-            </div>
-            <div class="schedule-grid">
-                <div class="schedule-card" data-sound="hover">
-                    <div class="schedule-header-card">
-                        <div class="schedule-day">Segunda-feira</div>
-                        <div class="schedule-status">
-                            <span class="status-dot"></span>
-                            Confirmado
-                        </div>
-                    </div>
-                    <div class="schedule-time">
-                        <span class="time-value">19:00</span>
-                        <span class="time-zone">BRT</span>
-                    </div>
-                    <div class="schedule-content">
-                        <div class="schedule-type">💬 Just Chatting</div>
-                        <div class="schedule-desc">Bate-papo com a comunidade, histórias e risadas</div>
-                    </div>
-                    <div class="schedule-duration">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        ~3 horas
-                    </div>
-                </div>
-                <div class="schedule-card" data-sound="hover">
-                    <div class="schedule-header-card">
-                        <div class="schedule-day">Terça-feira</div>
-                        <div class="schedule-status">
-                            <span class="status-dot"></span>
-                            Confirmado
-                        </div>
-                    </div>
-                    <div class="schedule-time">
-                        <span class="time-value">19:00</span>
-                        <span class="time-zone">BRT</span>
-                    </div>
-                    <div class="schedule-content">
-                        <div class="schedule-type">🎮 Gameplay</div>
-                        <div class="schedule-desc">Jogos variados com a galera do chat</div>
-                    </div>
-                    <div class="schedule-duration">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        ~4 horas
-                    </div>
-                </div>
-                <div class="schedule-card" data-sound="hover">
-                    <div class="schedule-header-card">
-                        <div class="schedule-day">Quarta-feira</div>
-                        <div class="schedule-status">
-                            <span class="status-dot"></span>
-                            Confirmado
-                        </div>
-                    </div>
-                    <div class="schedule-time">
-                        <span class="time-value">19:00</span>
-                        <span class="time-zone">BRT</span>
-                    </div>
-                    <div class="schedule-content">
-                        <div class="schedule-type">📺 React</div>
-                        <div class="schedule-desc">Reagindo a vídeos engraçados e trends</div>
-                    </div>
-                    <div class="schedule-duration">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        ~3 horas
-                    </div>
-                </div>
-                <div class="schedule-card" data-sound="hover">
-                    <div class="schedule-header-card">
-                        <div class="schedule-day">Quinta-feira</div>
-                        <div class="schedule-status">
-                            <span class="status-dot"></span>
-                            Confirmado
-                        </div>
-                    </div>
-                    <div class="schedule-time">
-                        <span class="time-value">19:00</span>
-                        <span class="time-zone">BRT</span>
-                    </div>
-                    <div class="schedule-content">
-                        <div class="schedule-type">✨ Especial</div>
-                        <div class="schedule-desc">Conteúdo surpresa toda semana</div>
-                    </div>
-                    <div class="schedule-duration">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        ~3 horas
-                    </div>
-                </div>
-                <div class="schedule-card" data-sound="hover">
-                    <div class="schedule-header-card">
-                        <div class="schedule-day">Sexta-feira</div>
-                        <div class="schedule-status hot">
-                            <span class="status-dot"></span>
-                            Imperdível
-                        </div>
-                    </div>
-                    <div class="schedule-time">
-                        <span class="time-value">20:00</span>
-                        <span class="time-zone">BRT</span>
-                    </div>
-                    <div class="schedule-content">
-                        <div class="schedule-type">🎉 Party Games</div>
-                        <div class="schedule-desc">Jogos em grupo com a comunidade</div>
-                    </div>
-                    <div class="schedule-duration">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        ~4 horas
-                    </div>
-                </div>
-                <div class="schedule-card featured" data-sound="hover">
-                    <div class="schedule-header-card">
-                        <div class="schedule-day">Sábado</div>
-                        <div class="schedule-status live">
-                            <span class="status-dot pulse"></span>
-                            Maratona
-                        </div>
-                    </div>
-                    <div class="schedule-time">
-                        <span class="time-value">15:00</span>
-                        <span class="time-zone">BRT</span>
-                    </div>
-                    <div class="schedule-content">
-                        <div class="schedule-type">🔥 Super Maratona</div>
-                        <div class="schedule-desc">O melhor dia da semana! Lives extensas com tudo</div>
-                    </div>
-                    <div class="schedule-duration">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                        6+ horas
-                    </div>
-                </div>
-                <div class="schedule-card rest" data-sound="hover">
-                    <div class="schedule-header-card">
-                        <div class="schedule-day">Domingo</div>
-                        <div class="schedule-status rest">
-                            <span class="status-dot"></span>
-                            Descanso
-                        </div>
-                    </div>
-                    <div class="schedule-time">
-                        <span class="time-value">—</span>
-                        <span class="time-zone"></span>
-                    </div>
-                    <div class="schedule-content">
-                        <div class="schedule-type">💤 Dia de Descanso</div>
-                        <div class="schedule-desc">Recarregando as energias para a próxima semana</div>
-                    </div>
-                    <div class="schedule-duration">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                        Até segunda!
-                    </div>
-                </div>
-            </div>
-            <div class="schedule-footer">
-                <p class="schedule-note">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                    Horários podem variar. Ative as notificações para não perder nenhuma live!
-                </p>
-            </div>
-        </section>
-
-        <!-- Clips Section -->
-        <section class="clips-section">
-            <h2 class="section-title">
-                <span class="title-icon">🎬</span>
-                Últimos Clipes
-            </h2>
-            <div class="clips-grid" id="clipsGrid">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- Footer Profissional -->
-        <footer class="footer">
-            <div class="footer-container">
-                <!-- Divisor elegante -->
-                <div class="footer-divider">
-                    <span class="divider-line"></span>
-                    <span class="divider-icon">♡</span>
-                    <span class="divider-line"></span>
-                </div>
-
-                <!-- Grid principal do footer -->
-                <div class="footer-grid">
-                    <!-- Coluna 1: Marca -->
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <span class="footer-logo-icon">♡</span>
-                            <span class="footer-logo-text">hxadinha</span>
-                        </div>
-                        <p class="footer-tagline">Streamer · Content Creator</p>
-                        <p class="footer-description">Lives com muito amor, risadas e uma comunidade incrível. Obrigada por fazer parte dessa família!</p>
-                    </div>
-
-                    <!-- Coluna 2: Links Rápidos -->
-                    <div class="footer-links-section">
-                        <h4 class="footer-title">Links Rápidos</h4>
-                        <ul class="footer-links">
-                            <li><a href="https://twitch.tv/hxadinha" target="_blank" rel="noopener noreferrer">Assistir Lives</a></li>
-                            <li><a href="https://twitch.tv/hxadinha/schedule" target="_blank" rel="noopener noreferrer">Programação</a></li>
-                            <li><a href="https://twitch.tv/hxadinha/videos" target="_blank" rel="noopener noreferrer">Vídeos & Clipes</a></li>
-                            <li><a href="https://discord.gg/hxadinha" target="_blank" rel="noopener noreferrer">Comunidade Discord</a></li>
-                            <li><a href="https://loja.hxadinha.com.br" target="_blank" rel="noopener noreferrer">Loja Oficial</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Coluna 3: Redes Sociais -->
-                    <div class="footer-social-section">
-                        <h4 class="footer-title">Redes Sociais</h4>
-                        <div class="footer-social-grid">
-                            <a href="https://twitch.tv/hxadinha" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitch">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
-                            </a>
-                            <a href="https://instagram.com/hxadinha" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                            </a>
-                            <a href="https://discord.gg/hxadinha" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Discord">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
-                            </a>
-                            <a href="https://tiktok.com/@hxadinha" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="TikTok">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                            </a>
-                            <a href="https://twitter.com/hxadinha" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter/X">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Coluna 4: Contato & Desenvolvimento -->
-                    <div class="footer-dev-section">
-                        <h4 class="footer-title">Desenvolvimento</h4>
-                        <div class="footer-dev-card">
-                            <div class="dev-info">
-                                <span class="dev-label">Criado com 💜 por</span>
-                                <span class="dev-name">LucTheKing</span>
-                            </div>
-                            <div class="dev-contacts">
-                                <a href="https://instagram.com/Luctheking" target="_blank" rel="noopener noreferrer" class="dev-contact-link">
-                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                                    <span>@Luctheking</span>
-                                </a>
-                                <a href="https://discord.com/users/PoderosoNappa" target="_blank" rel="noopener noreferrer" class="dev-contact-link">
-                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
-                                    <span>PoderosoNappa</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Barra inferior -->
-                <div class="footer-bottom">
-                    <div class="footer-bottom-left">
-                        <span class="footer-copyright">© 2025 Hxadinha. Todos os direitos reservados.</span>
-                    </div>
-                    <div class="footer-bottom-center">
-                        <span class="footer-made">Feito com</span>
-                        <span class="footer-heart">♡</span>
-                        <span class="footer-made">no Brasil</span>
-                    </div>
-                    <div class="footer-bottom-right">
-                        <span class="footer-version">v2.0 · 2025</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </main>
-
-    <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle" data-sound="click" aria-label="Abrir chat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
-        <span class="chat-toggle-label">Chat</span>
-    </button>
-
-    <!-- Chat Sidebar -->
-    <div class="chat-sidebar" id="chatSidebar">
-        <div class="chat-header">
-            <span class="chat-header-title">💬 Chat ao Vivo</span>
-            <button class="chat-close" id="chatClose" data-sound="click" aria-label="Fechar chat">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"/>
-                </svg>
-            </button>
-        </div>
-        <iframe 
-            class="chat-embed" 
-            id="chatEmbed"
-            src="about:blank"
-            title="Chat da Twitch - Hxadinha"
-        ></iframe>
-    </div>
-    <div class="chat-overlay" id="chatOverlay"></div>
-
-    <!-- Top Navigation -->
-    <header class="top-header" id="topHeader">
-        <nav class="top-nav">
-            <a href="#" class="nav-logo">
-                <span class="logo-icon">♡</span>
-                <span class="logo-text">hxadinha</span>
-            </a>
-            <div class="nav-links">
-                <a href="https://twitch.tv/hxadinha" class="nav-link active" target="_blank" rel="noopener noreferrer" data-sound="click">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
-                    <span>Twitch</span>
-                </a>
-                <a href="https://instagram.com/hxadinha" class="nav-link" target="_blank" rel="noopener noreferrer" data-sound="click">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://discord.gg/hxadinha" class="nav-link" target="_blank" rel="noopener noreferrer" data-sound="click">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
-                    <span>Discord</span>
-                </a>
-                <a href="https://tiktok.com/@hxadinha" class="nav-link" target="_blank" rel="noopener noreferrer" data-sound="click">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                    <span>TikTok</span>
-                </a>
-                <a href="https://loja.hxadinha.com.br" class="nav-link" target="_blank" rel="noopener noreferrer" data-sound="click">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                    <span>Loja</span>
-                </a>
-            </div>
-            <button class="nav-mobile-toggle" id="mobileMenuToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 6L6 18M6 6l12 12"/>
-            </svg>
+      <div class="nav-right">
+        <button class="nav-search" id="openPalette" title="Buscar (Ctrl+K)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </button>
-        <img src="" alt="" class="lightbox-image" id="lightboxImage">
+        <button class="nav-theme" id="themeToggle" title="Alternar tema">
+          <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <div class="nav-status" id="liveStatus">
+          <span class="status-dot"></span>
+          <span class="status-text">OFFLINE</span>
+        </div>
+        <a href="https://twitch.tv/hxadinha" target="_blank" class="nav-cta">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+          <span>Assistir</span>
+        </a>
+      </div>
+    </div>
+    <div class="nav-progress"><div class="nav-progress-bar" id="scrollProgress"></div></div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-particles" id="heroParticles"></div>
+    
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <div class="avatar-glow"></div>
+        <div class="avatar-ring" id="avatarRing">
+          <img src="https://cdn.hxadinha.com.br/eu2025.webp" alt="Hxadinha" id="profileImage">
+        </div>
+        <div class="avatar-badge" id="liveBadge"><span>LIVE</span></div>
+        <div class="avatar-verified" title="Streamer Verificada">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        </div>
+      </div>
+      
+      <div class="hero-info">
+        <div class="hero-badges">
+          <span class="badge badge-affiliate">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            Affiliate
+          </span>
+          <span class="badge badge-brasil">🇧🇷 Brasil</span>
+          <span class="badge badge-dota">🎮 Dota 2</span>
+        </div>
+        
+        <p class="hero-tag">@hxadinha</p>
+        <h1 class="hero-title"><span class="title-glow">HXADINHA</span></h1>
+        <p class="hero-bio" id="channelDescription">Gaymer de Roça • 31 anos • Dota me destruiu ♡</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value" id="followerCount">--</span>
+            <span class="stat-label">Seguidores</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value" id="viewCount">--</span>
+            <span class="stat-label">Views</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value" id="channelAge">--</span>
+            <span class="stat-label">Anos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value" id="totalStreams">--</span>
+            <span class="stat-label">Streams</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary btn-glow" id="openTV">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
+            <span>Abrir TV</span>
+          </button>
+          <a href="https://twitch.tv/hxadinha/subscribe" target="_blank" class="btn-sub">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>Sub</span>
+          </a>
+          <a href="https://twitch.tv/hxadinha" target="_blank" class="btn-secondary">
+            <span>Seguir</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://twitter.com/hxadinha" target="_blank" class="social-icon" data-tooltip="Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://instagram.com/hxadinha" target="_blank" class="social-icon" data-tooltip="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://discord.gg/hxadinha" target="_blank" class="social-icon" data-tooltip="Discord">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@hxadinha" target="_blank" class="social-icon" data-tooltip="TikTok">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://youtube.com/@hxadinha" target="_blank" class="social-icon" data-tooltip="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <!-- Script -->
-    <script src="script.js" defer></script>
+    <div class="hero-scroll">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Role para explorar</span>
+    </div>
+  </section>
+
+  <!-- Now Playing Widget -->
+  <section id="nowplaying" class="section section-nowplaying">
+    <div class="container">
+      <div class="nowplaying-widget">
+        <div class="np-icon">
+          <div class="np-bars">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="np-info">
+          <span class="np-label">Tocando Agora</span>
+          <span class="np-song" id="currentSong">Lofi Hip Hop Radio 📻</span>
+        </div>
+        <div class="np-player">
+          <button class="np-btn" id="playPause">▶</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub Goals -->
+  <section id="goals" class="section section-goals">
+    <div class="container">
+      <div class="goals-card">
+        <div class="goals-header">
+          <h3>🎯 Meta do Mês</h3>
+          <span class="goals-count"><span id="currentSubs">127</span> / <span id="goalSubs">150</span></span>
+        </div>
+        <div class="goals-bar">
+          <div class="goals-progress" id="goalsProgress" style="width: 85%"></div>
+        </div>
+        <p class="goals-reward">🎁 Meta: <strong>Sorteio de R$100!</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-badge">Conheça</span>
+        <h2 class="section-title-big">Sobre Mim</h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card about-card-main">
+          <div class="card-icon">👋</div>
+          <h3>Quem sou eu</h3>
+          <p>Olá! Sou a <strong>Hxadinha</strong>, streamer brasileira apaixonada por games. Dota 2 destruiu minha sanidade, mas aqui a gente ri, chora e se diverte junto! ♡</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🎮</div>
+          <h3>Games</h3>
+          <p><strong>Dota 2</strong>, Valorant, GTA RP e o que a chat pedir!</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">💜</div>
+          <h3>Comunidade</h3>
+          <p>Família acolhedora. Zero tolerância para toxicidade.</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🎤</div>
+          <h3>Setup</h3>
+          <p><strong>PC:</strong> RTX 3070 + i7<br><strong>Mic:</strong> HyperX QuadCast</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game Stats - Jogos Recentes via API -->
+  <section id="gamestats" class="section section-gamestats">
+    <div class="container">
+      <div class="gamestats-grid" id="gamestatsGrid">
+        <div class="gamestat-skeleton"></div>
+        <div class="gamestat-skeleton"></div>
+        <div class="gamestat-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clips Section -->
+  <section id="clips" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-badge">Momentos</span>
+          <h2 class="section-title">🔥 Top Clips</h2>
+        </div>
+        <a href="https://twitch.tv/hxadinha/clips" target="_blank" class="section-link">
+          Ver todos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="clips-grid" id="clipsGrid">
+        <div class="clip-skeleton"></div>
+        <div class="clip-skeleton"></div>
+        <div class="clip-skeleton"></div>
+        <div class="clip-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-badge">Conteúdo</span>
+          <h2 class="section-title">📺 Últimos VODs</h2>
+        </div>
+        <a href="https://twitch.tv/hxadinha/videos" target="_blank" class="section-link">
+          Ver todos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="videos-grid" id="videosGrid">
+        <div class="video-skeleton"></div>
+        <div class="video-skeleton"></div>
+        <div class="video-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-badge">Programação</span>
+        <h2 class="section-title-big">📅 Agenda</h2>
+      </div>
+      
+      <div class="schedule-grid" id="scheduleGrid">
+        <div class="schedule-day" data-day="1">
+          <span class="day-name">SEG</span>
+          <span class="day-time">20h</span>
+          <span class="day-game">Dota</span>
+        </div>
+        <div class="schedule-day" data-day="2">
+          <span class="day-name">TER</span>
+          <span class="day-time">20h</span>
+          <span class="day-game">Variado</span>
+        </div>
+        <div class="schedule-day" data-day="3">
+          <span class="day-name">QUA</span>
+          <span class="day-time">20h</span>
+          <span class="day-game">Dota</span>
+        </div>
+        <div class="schedule-day" data-day="4">
+          <span class="day-name">QUI</span>
+          <span class="day-time">20h</span>
+          <span class="day-game">Variado</span>
+        </div>
+        <div class="schedule-day" data-day="5">
+          <span class="day-name">SEX</span>
+          <span class="day-time">20h</span>
+          <span class="day-game">Especial</span>
+        </div>
+        <div class="schedule-day off" data-day="6">
+          <span class="day-name">SÁB</span>
+          <span class="day-time">--</span>
+          <span class="day-game">Folga</span>
+        </div>
+        <div class="schedule-day off" data-day="0">
+          <span class="day-name">DOM</span>
+          <span class="day-time">--</span>
+          <span class="day-game">Folga</span>
+        </div>
+      </div>
+
+      <div class="next-stream" id="nextStream">
+        <div class="next-icon">⏰</div>
+        <div class="next-info">
+          <span class="next-label">Próxima Live</span>
+          <span class="next-countdown" id="countdown">--:--:--</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Supporters -->
+  <section id="supporters" class="section section-supporters">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-badge">Top Fans</span>
+        <h2 class="section-title-big">👑 Supporters</h2>
+      </div>
+      
+      <div class="supporters-grid" id="supportersGrid">
+        <div class="supporter-card supporter-gold">
+          <span class="supporter-rank">🥇</span>
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/default-profile.png" alt="" id="supporter1Img">
+          <span class="supporter-name" id="supporter1Name">---</span>
+          <span class="supporter-months" id="supporter1Months">24m</span>
+        </div>
+        <div class="supporter-card supporter-silver">
+          <span class="supporter-rank">🥈</span>
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/default-profile.png" alt="" id="supporter2Img">
+          <span class="supporter-name" id="supporter2Name">---</span>
+          <span class="supporter-months" id="supporter2Months">18m</span>
+        </div>
+        <div class="supporter-card supporter-bronze">
+          <span class="supporter-rank">🥉</span>
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/default-profile.png" alt="" id="supporter3Img">
+          <span class="supporter-name" id="supporter3Name">---</span>
+          <span class="supporter-months" id="supporter3Months">12m</span>
+        </div>
+      </div>
+
+      <div class="team-grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- Commands Section -->
+  <section id="commands" class="section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-badge">Chat</span>
+        <h2 class="section-title-big">💬 Comandos</h2>
+      </div>
+      
+      <div class="commands-grid">
+        <div class="command-card"><code>!discord</code><p>Servidor</p></div>
+        <div class="command-card"><code>!social</code><p>Redes</p></div>
+        <div class="command-card"><code>!uptime</code><p>Tempo</p></div>
+        <div class="command-card"><code>!rank</code><p>MMR</p></div>
+        <div class="command-card"><code>!specs</code><p>PC</p></div>
+        <div class="command-card"><code>!donate</code><p>Apoiar</p></div>
+        <div class="command-card"><code>!lurk</code><p>Lurkar</p></div>
+        <div class="command-card"><code>!hug</code><p>Abraço</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emotes -->
+  <section id="emotes" class="section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-badge">Sub Perks</span>
+        <h2 class="section-title-big">💜 Emotes</h2>
+      </div>
+      <div class="emotes-grid" id="emotesGrid">
+        <div class="emote-skeleton"></div>
+        <div class="emote-skeleton"></div>
+        <div class="emote-skeleton"></div>
+        <div class="emote-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col footer-brand">
+            <div class="footer-logo"><span class="logo-heart">♡</span><span>hxadinha</span></div>
+            <p>Streamer brasileira de games e entretenimento.</p>
+            <div class="footer-socials">
+              <a href="https://twitter.com/hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a href="https://instagram.com/hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg></a>
+              <a href="https://discord.gg/hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></a>
+              <a href="https://youtube.com/@hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Links</h4>
+            <a href="https://twitch.tv/hxadinha">Twitch</a>
+            <a href="#clips">Clips</a>
+            <a href="#schedule">Agenda</a>
+          </div>
+          <div class="footer-col">
+            <h4>Comunidade</h4>
+            <a href="https://discord.gg/hxadinha">Discord</a>
+            <a href="#">Regras</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <a href="https://twitch.tv/hxadinha/subscribe">Sub</a>
+            <a href="#">Donate</a>
+            <a href="#">Contato</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 hxadinha</p>
+        <p class="credits">Crafted with <span class="heart">♡</span> by <strong>LucTheKing</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mini TV Widget -->
+  <div class="tv-widget" id="tvWidget">
+    <div class="tv-header" id="tvHeader">
+      <div class="tv-title">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+        <span>hxadinha TV</span>
+        <span class="tv-live-badge" id="tvLiveBadge">LIVE</span>
+      </div>
+      <div class="tv-controls">
+        <button class="tv-btn" id="tvMin" title="Minimizar">−</button>
+        <button class="tv-btn tv-close" id="tvClose" title="Fechar">×</button>
+      </div>
+    </div>
+    <div class="tv-tabs">
+      <button class="tv-tab active" data-tab="stream">Stream</button>
+      <button class="tv-tab" data-tab="chat">Chat</button>
+    </div>
+    <div class="tv-body">
+      <div class="tv-panel active" id="panelStream">
+        <div class="tv-placeholder" id="streamPlaceholder">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <p>Clique para carregar</p>
+          <button class="btn-load" id="loadStream">Carregar Player</button>
+        </div>
+      </div>
+      <div class="tv-panel" id="panelChat">
+        <div class="tv-placeholder" id="chatPlaceholder">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <p>Clique para carregar</p>
+          <button class="btn-load" id="loadChat">Carregar Chat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAB -->
+  <div class="fab-container">
+    <button class="fab fab-main" id="fabMain" title="Menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </button>
+    <div class="fab-options" id="fabOptions">
+      <button class="fab fab-option" data-action="tv" title="Mini TV">📺</button>
+      <a href="https://twitch.tv/hxadinha" target="_blank" class="fab fab-option" title="Twitch">💜</a>
+      <a href="https://discord.gg/hxadinha" target="_blank" class="fab fab-option" title="Discord">💬</a>
+      <button class="fab fab-option" data-action="top" title="Topo">⬆️</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">⌨️</span>
+    <span class="toast-text">Pressione <kbd>Ctrl+K</kbd> para buscar</span>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
