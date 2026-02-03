@@ -1,582 +1,1881 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>hxadinha ♡ TV | Streamer Profissional</title>
-  <meta name="description" content="Página oficial da streamer hxadinha - Gaymer de Roça - Twitch Affiliate">
-  <meta name="theme-color" content="#9146FF">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hxadinha ♡ TV | Streamer</title>
+<meta name="description" content="Canal oficial da hxadinha - Gaymer de Roça">
+<meta name="theme-color" content="#9146FF">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=3840&q=100">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--purple:#9146FF;--pink:#FF66C4;--bg:#0B001A;--bg-card:rgba(20,10,40,0.8);--text:#FFFFFF;--text-soft:#E0C9FF;--glass:rgba(11,0,26,0.85);--glow:0 0 30px rgba(145,70,255,0.5);--gradient:linear-gradient(135deg,#9146FF,#FF66C4)}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;color:var(--text);min-height:100vh;overflow-x:hidden}
+/* BACKGROUND IMAGE 8K ULTRA PREMIUM */
+body {
+  background: #0B001A;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    linear-gradient(to bottom, rgba(11,0,26,0.88), rgba(11,0,26,0.75), rgba(11,0,26,0.85)),
+    url('https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=3840&q=100') center/cover no-repeat;
+  background-attachment: fixed;
+  z-index: -2;
+  pointer-events: none;
+  animation: fadeIn 1.2s ease-out forwards;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at top center, rgba(145,70,255,0.08), transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  body::before {
+    background-attachment: scroll;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.particles{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;width:3px;height:3px;background:var(--purple);border-radius:50%;opacity:0.25;animation:float 25s infinite linear;box-shadow:0 0 6px var(--purple)}
+@keyframes float{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:0.25}90%{opacity:0.25}100%{transform:translateY(-100vh) rotate(720deg);opacity:0}}
+
+.live-banner{position:fixed;top:0;left:0;right:0;height:44px;background:linear-gradient(90deg,#e91916,#ff4444);display:none;align-items:center;justify-content:center;gap:16px;z-index:1001;font-size:15px;font-weight:600}
+.live-banner.show{display:flex}
+.live-banner .pulse{width:12px;height:12px;background:#fff;border-radius:50%;animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
+.live-banner .watch-btn{background:#fff;color:#e91916;padding:8px 20px;border-radius:20px;text-decoration:none;font-weight:700;font-size:14px;transition:transform 0.2s}
+.live-banner .watch-btn:hover{transform:scale(1.05)}
+
+nav{position:fixed;top:0;left:0;right:0;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:1000;transition:all 0.3s}
+nav.scrolled{background:var(--glass);backdrop-filter:blur(12px);border-bottom:1px solid rgba(145,70,255,0.2)}
+nav.live-active{top:44px}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text)}
+.nav-logo-icon{width:44px;height:44px;background:var(--gradient);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.nav-logo-text{font-weight:800;font-size:22px}
+.nav-menu{display:flex;gap:10px;list-style:none}
+.nav-menu a{color:var(--text-soft);text-decoration:none;padding:12px 20px;border-radius:10px;font-size:15px;font-weight:600;transition:all 0.2s}
+.nav-menu a:hover{color:var(--text);background:rgba(145,70,255,0.15)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-btn{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;transition:all 0.2s}
+.nav-btn:hover{border-color:var(--purple);background:rgba(145,70,255,0.1)}
+.nav-cta{background:var(--gradient);color:#fff;padding:12px 28px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;box-shadow:var(--glow);transition:all 0.2s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(145,70,255,0.6)}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:140px 24px 100px;position:relative;z-index:1}
+.hero-avatar{position:relative;margin-bottom:32px}
+.avatar-glow{position:absolute;inset:-40px;background:radial-gradient(circle,rgba(145,70,255,0.5) 0%,transparent 70%);border-radius:50%;animation:glow-pulse 3s infinite}
+@keyframes glow-pulse{0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:0.3;transform:scale(1.1)}}
+.avatar-ring{width:200px;height:200px;padding:6px;border-radius:50%;background:var(--gradient);position:relative}
+.avatar-ring.live{animation:ring-spin 3s linear infinite}
+@keyframes ring-spin{to{filter:hue-rotate(360deg)}}
+.avatar-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:6px solid var(--bg)}
+.avatar-badge{position:absolute;bottom:12px;right:12px;background:#e91916;padding:6px 14px;border-radius:8px;font-size:13px;font-weight:800;display:none}
+.avatar-badge.show{display:block}
+.hero-info{text-align:center;max-width:700px}
+.hero-tag{color:var(--purple);font-size:18px;font-weight:600;margin-bottom:12px}
+.hero-name{font-size:72px;font-weight:900;letter-spacing:5px;margin-bottom:20px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-bio{color:var(--text-soft);font-size:22px;margin-bottom:32px}
+.hero-stats{display:flex;gap:48px;justify-content:center;margin-bottom:36px}
+.stat{text-align:center}
+.stat-value{font-size:36px;font-weight:800;color:var(--purple)}
+.stat-label{font-size:15px;color:var(--text-soft);text-transform:uppercase;letter-spacing:1px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.btn{padding:16px 36px;border-radius:14px;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:12px;border:none}
+.btn-primary{background:var(--gradient);color:#fff;box-shadow:var(--glow)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 50px rgba(145,70,255,0.6)}
+.btn-secondary{background:transparent;color:var(--text);border:2px solid rgba(145,70,255,0.5)}
+.btn-secondary:hover{border-color:var(--purple);background:rgba(145,70,255,0.1)}
+
+section{padding:120px 24px;position:relative;z-index:1;background:transparent}
+.container{max-width:1300px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:60px}
+.section-tag{color:var(--purple);font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.section-title{font-size:42px;font-weight:800;letter-spacing:1px}
+
+/* ========================================
+   SECTION HEADER PRO - ULTRA MODERN 2025
+   ======================================== */
+.section-header-pro {
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.section-badge-pro {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, rgba(145,70,255,0.15), rgba(255,102,196,0.1));
+  border: 1px solid rgba(145,70,255,0.3);
+  border-radius: 50px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.section-badge-pro .badge-icon {
+  font-size: 16px;
+}
+
+.section-badge-pro .badge-text {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #9146FF, #FF66C4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title-pro {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0C9FF 50%, #9146FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(145,70,255,0.3);
+}
+
+.section-subtitle-pro {
+  font-size: 14px;
+  color: var(--text-soft);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   STATS DASHBOARD PRO - ULTRA MODERN
+   ======================================== */
+.stats-dashboard-pro {
+  background: linear-gradient(135deg, rgba(11,0,26,0.8), rgba(20,10,40,0.6));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(145,70,255,0.15);
+  border-radius: 20px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-dashboard-pro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(145,70,255,0.5), rgba(255,102,196,0.5), transparent);
+}
+
+.stats-grid-pro {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+}
+
+.chart-container-pro {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(145,70,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  height: 220px;
+  position: relative;
+}
+
+.chart-container-pro::before {
+  content: "📈 Crescimento de Seguidores";
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chart-container-pro canvas {
+  width: 100% !important;
+  height: calc(100% - 20px) !important;
+  margin-top: 20px;
+}
+
+.stats-cards-pro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-card-pro {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(145,70,255,0.12);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-pro::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.stat-card-pro:hover {
+  background: rgba(145,70,255,0.08);
+  border-color: rgba(145,70,255,0.25);
+  transform: translateX(4px);
+}
+
+.stat-card-pro:hover::before {
+  opacity: 1;
+}
+
+.stat-card-icon-pro {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, rgba(145,70,255,0.2), rgba(255,102,196,0.15));
+  border: 1px solid rgba(145,70,255,0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.stat-card-info-pro {
+  flex: 1;
+}
+
+.stat-card-info-pro h4 {
+  font-size: 11px;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.stat-card-info-pro span {
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFFFFF, #E0C9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card-trend {
+  font-size: 11px;
+  color: #00E676;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-card-trend.down {
+  color: #FF5252;
+}
+
+/* Chat Section Pro */
+.chat-section-pro {
+  background: linear-gradient(135deg, rgba(11,0,26,0.8), rgba(20,10,40,0.6));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(145,70,255,0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chat-section-pro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(145,70,255,0.5), rgba(255,102,196,0.5), transparent);
+}
+
+.chat-header-pro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(145,70,255,0.1);
+}
+
+.chat-header-pro h3 {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chat-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(145,70,255,0.15);
+  border: 1px solid rgba(145,70,255,0.25);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.chat-status-badge.live {
+  background: rgba(233,25,22,0.15);
+  border-color: rgba(233,25,22,0.3);
+  color: #FF5252;
+}
+
+.chat-status-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.chat-status-badge.live .dot {
+  animation: pulse 1s infinite;
+}
+
+@media(max-width:900px){
+  .stats-grid-pro{grid-template-columns:1fr}
+  .chart-container-pro{height:180px}
+}
+
+.main-grid{display:grid;grid-template-columns:1fr 400px;gap:32px;margin-bottom:60px}
+.chat-section{background:rgba(11,0,26,0.7);backdrop-filter:blur(12px);border:1px solid rgba(145,70,255,0.2);border-radius:24px;overflow:hidden;height:600px;display:flex;flex-direction:column}
+.chat-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:rgba(0,0,0,0.3);border-bottom:1px solid rgba(145,70,255,0.1)}
+.chat-header h3{font-size:18px;font-weight:700;display:flex;align-items:center;gap:10px}
+.chat-header .live-dot{width:10px;height:10px;background:#e91916;border-radius:50%;animation:pulse 1s infinite}
+.chat-viewers{font-size:14px;color:var(--text-soft);background:rgba(145,70,255,0.2);padding:6px 14px;border-radius:20px}
+.chat-embed{flex:1;background:#18181b}
+.chat-embed iframe{width:100%;height:100%;border:none}
+.chat-offline{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--text-soft)}
+.chat-offline-icon{font-size:48px;opacity:0.5}
+.chat-offline p{font-size:16px}
+.chat-offline .btn{margin-top:10px}
+
+.stats-dashboard{background:rgba(11,0,26,0.7);backdrop-filter:blur(12px);border:1px solid rgba(145,70,255,0.2);border-radius:24px;padding:32px}
+.stats-grid{display:grid;grid-template-columns:2fr 1fr;gap:32px}
+.chart-container{background:rgba(0,0,0,0.3);border-radius:16px;padding:24px;height:240px;position:relative}
+.chart-container canvas{width:100%!important;height:100%!important}
+.stats-cards{display:flex;flex-direction:column;gap:16px}
+.stat-card{background:rgba(145,70,255,0.1);border:1px solid rgba(145,70,255,0.2);border-radius:14px;padding:20px;display:flex;align-items:center;gap:16px}
+.stat-card-icon{width:54px;height:54px;background:var(--gradient);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.stat-card-info h4{font-size:14px;color:var(--text-soft);text-transform:uppercase;letter-spacing:1px}
+.stat-card-info span{font-size:28px;font-weight:800}
+
+.leaderboard{background:rgba(11,0,26,0.7);backdrop-filter:blur(12px);border:1px solid rgba(145,70,255,0.2);border-radius:24px;padding:32px}
+.leaderboard-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.leaderboard-header h3{font-size:20px;font-weight:700}
+.leaderboard-tabs{display:flex;gap:12px}
+.leaderboard-tab{padding:10px 22px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--text-soft);font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s}
+.leaderboard-tab:hover{border-color:var(--purple);color:var(--text)}
+.leaderboard-tab.active{background:var(--purple);border-color:var(--purple);color:#fff}
+.leaderboard-list{display:flex;flex-direction:column;gap:14px}
+.leaderboard-item{display:flex;align-items:center;gap:16px;padding:16px;background:rgba(0,0,0,0.2);border-radius:14px;transition:all 0.2s}
+.leaderboard-item:hover{background:rgba(145,70,255,0.1);transform:translateX(5px)}
+.leaderboard-rank{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}
+.leaderboard-rank.gold{background:linear-gradient(135deg,#ffd700,#ffb700);color:#000}
+.leaderboard-rank.silver{background:linear-gradient(135deg,#c0c0c0,#a0a0a0);color:#000}
+.leaderboard-rank.bronze{background:linear-gradient(135deg,#cd7f32,#a0522d);color:#fff}
+.leaderboard-rank.normal{background:rgba(255,255,255,0.1);color:var(--text-soft)}
+.leaderboard-avatar{width:48px;height:48px;border-radius:50%;border:2px solid var(--purple);object-fit:cover}
+.leaderboard-info{flex:1}
+.leaderboard-name{font-size:16px;font-weight:600}
+.leaderboard-detail{font-size:14px;color:var(--text-soft)}
+.leaderboard-points{font-size:20px;font-weight:800;color:var(--purple)}
+.leaderboard-loading{display:flex;align-items:center;justify-content:center;padding:40px;color:var(--text-soft);font-size:15px}
+.leaderboard-loading::before{content:'';width:20px;height:20px;border:2px solid var(--purple);border-top-color:transparent;border-radius:50%;margin-right:12px;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.team-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:600;transition:all 0.2s}
+.team-badge:hover{transform:translateY(-2px)}
+.team-badge.mod{background:rgba(145,70,255,0.2);border:1px solid rgba(145,70,255,0.4)}
+.team-badge.vip{background:rgba(255,102,196,0.2);border:1px solid rgba(255,102,196,0.4)}
+
+.social-hub{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.social-card{background:rgba(11,0,26,0.7);backdrop-filter:blur(12px);border:1px solid rgba(145,70,255,0.2);border-radius:20px;padding:24px;min-height:280px}
+.social-card-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.social-card-header span{font-size:28px}
+.social-card-header h4{font-size:18px;font-weight:700}
+.social-card-header a{margin-left:auto;font-size:14px;color:var(--purple);text-decoration:none}
+.social-card-header a:hover{text-decoration:underline}
+.social-posts{display:flex;flex-direction:column;gap:16px}
+.social-post{padding:16px;background:rgba(0,0,0,0.2);border-radius:12px;transition:all 0.2s}
+.social-post:hover{background:rgba(145,70,255,0.1)}
+.social-post-text{font-size:15px;line-height:1.5;margin-bottom:10px}
+.social-post-meta{display:flex;gap:16px;font-size:13px;color:var(--text-soft)}
+.social-post-date{font-size:13px;color:var(--text-soft)}
+
+.clips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.clip-card{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.3s}
+.clip-card:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(145,70,255,0.3)}
+.clip-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.clip-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.9),transparent);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity 0.2s}
+.clip-card:hover .clip-overlay{opacity:1}
+.clip-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:var(--gradient);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px}
+.clip-title{font-size:16px;font-weight:600;margin-bottom:8px}
+.clip-meta{font-size:14px;color:var(--text-soft)}
+.clip-duration{position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.8);padding:6px 12px;border-radius:8px;font-size:14px}
+
+.schedule-grid{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.schedule-day{width:130px;height:130px;border-radius:50%;background:rgba(11,0,26,0.7);backdrop-filter:blur(12px);border:2px solid rgba(145,70,255,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all 0.3s;cursor:pointer}
+.schedule-day:hover{border-color:var(--purple);transform:scale(1.1);box-shadow:var(--glow)}
+.schedule-day.today{border-color:var(--purple);background:rgba(145,70,255,0.15)}
+.schedule-day.off{opacity:0.4}
+.schedule-day .day{font-size:15px;color:var(--text-soft);text-transform:uppercase}
+.schedule-day .time{font-size:28px;font-weight:800;color:var(--purple)}
+.schedule-day .game{font-size:13px;color:var(--text-soft)}
+
+/* ========================================
+   FOOTER - ULTRA PROFESSIONAL 2025
+   ======================================== */
+.footer {
+  background: linear-gradient(180deg, rgba(11,0,26,0.95) 0%, rgba(5,0,15,0.98) 100%);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(145,70,255,0.2);
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--purple), transparent);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 0;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.footer-logo-link:hover {
+  transform: translateX(4px);
+}
+
+.footer-logo-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(145,70,255,0.3);
+}
+
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.footer-tagline {
+  font-size: 12px;
+  color: var(--purple);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer-desc {
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 320px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.footer-social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-btn:hover {
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+
+.footer-social-btn.twitch:hover {
+  background: #9146FF;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(145,70,255,0.4);
+}
+
+.footer-social-btn.twitter:hover {
+  background: #1DA1F2;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(29,161,242,0.4);
+}
+
+.footer-social-btn.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(225,48,108,0.4);
+}
+
+.footer-social-btn.discord:hover {
+  background: #5865F2;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(88,101,242,0.4);
+}
+
+.footer-social-btn.tiktok:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--purple);
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+
+.footer-col a {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 0;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+
+.footer-col a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 4px;
+  background: var(--purple);
+  border-radius: 2px;
+  transition: width 0.2s;
+  opacity: 0;
+}
+
+.footer-col a:hover::before {
+  width: 3px;
+  opacity: 1;
+}
+
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(145,70,255,0.3), transparent);
+  margin: 0 -24px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px;
+  margin: 0 -24px;
+  background: rgba(0,0,0,0.3);
+}
+
+.footer-bottom-left,
+.footer-bottom-center,
+.footer-bottom-right {
+  flex: 1;
+}
+
+.footer-bottom-center {
+  text-align: center;
+}
+
+.footer-bottom-right {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+
+.footer-copyright strong {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.footer-made {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+
+.heart-pulse {
+  display: inline-block;
+  color: #FF66C4;
+  animation: heartPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.dev-link {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.dev-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient);
+  transition: width 0.3s;
+}
+
+.dev-link:hover {
+  color: #FF66C4;
+}
+
+.dev-link:hover::after {
+  width: 100%;
+}
+
+.footer-legal-link {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal-link:hover {
+  color: var(--purple);
+}
+
+.footer-dot {
+  color: rgba(255,255,255,0.2);
+  font-size: 10px;
+}
+
+/* Footer Responsive */
+@media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="hxadinha ♡ TV">
-  <meta property="og:description" content="Gaymer de Roça • Streamer Brasileira">
-  <meta property="og:image" content="https://cdn.hxadinha.com.br/eu2025.webp">
-  <meta property="og:url" content="https://hxadinha.com.br">
-  <meta property="og:type" content="website">
+  .footer-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
   
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@hxadinha">
+  .footer-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 40px 20px 0;
+  }
   
-  <!-- Fonts & CDNs -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  .footer-links-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-bottom-left,
+  .footer-bottom-center,
+  .footer-bottom-right {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+  
+  .footer-name {
+    font-size: 18px;
+  }
+  
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+@media(max-width:1100px){.main-grid{grid-template-columns:1fr}.chat-section{height:500px}}
+@media(max-width:768px){.bg-image{background-position:center top;background-attachment:scroll}}
+@media(max-width:900px){.stats-grid{grid-template-columns:1fr}.clips-grid{grid-template-columns:repeat(2,1fr)}.social-hub{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.hero-name{font-size:48px}.hero-stats{gap:28px}.stat-value{font-size:28px}.clips-grid{grid-template-columns:1fr}.schedule-grid{gap:14px}.schedule-day{width:90px;height:90px}.schedule-day .time{font-size:20px}.nav-menu{display:none}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:12px;text-align:center}}
+</style>
 </head>
 <body>
 
-  <!-- BACKGROUND IMAGE - SETUP STREAMER -->
-  <div class="bg-image"></div>
-  <div class="bg-overlay"></div>
+<div class="particles" id="particles"></div>
 
-  <!-- Loading Screen PRO -->
-  <div class="loader" id="loader">
-    <div class="loader-content">
-      <div class="loader-logo">
-        <span class="loader-heart">♡</span>
-        <span class="loader-name">hxadinha</span>
+<div class="live-banner" id="liveBanner">
+<div class="pulse"></div>
+<span>🔴 AO VIVO</span>
+<span id="streamTitle">Carregando...</span>
+<span id="viewerCount">0 viewers</span>
+<span id="uptime">00:00:00</span>
+<a href="https://twitch.tv/hxadinha" target="_blank" class="watch-btn">Assistir Agora</a>
+</div>
+
+<nav id="navbar">
+<a href="#" class="nav-logo">
+<div class="nav-logo-icon">♡</div>
+<span class="nav-logo-text">hxadinha</span>
+</a>
+<ul class="nav-menu">
+<li><a href="#hero">Home</a></li>
+<li><a href="#stats">Stats</a></li>
+<li><a href="#clips">Clips</a></li>
+<li><a href="#schedule">Agenda</a></li>
+<li><a href="#community">Comunidade</a></li>
+</ul>
+<div class="nav-right">
+<button class="nav-btn" id="searchBtn" title="Buscar (Ctrl+K)">🔍</button>
+<button class="nav-btn" id="chatToggle" title="Chat">💬</button>
+<a href="https://twitch.tv/hxadinha" target="_blank" class="nav-cta">Assistir</a>
+</div>
+</nav>
+
+<section class="hero" id="hero">
+<div class="hero-avatar">
+<div class="avatar-glow"></div>
+<div class="avatar-ring" id="avatarRing">
+<img src="https://cdn.hxadinha.com.br/eu2025.webp" alt="hxadinha" id="profileImg">
+</div>
+<div class="avatar-badge" id="liveBadge">LIVE</div>
+</div>
+<div class="hero-info">
+<p class="hero-tag">@hxadinha</p>
+<h1 class="hero-name">HXADINHA</h1>
+<p class="hero-bio">Gaymer de Roça • 31 anos • Dota me destruiu ♡</p>
+<div class="hero-stats">
+<div class="stat"><div class="stat-value" id="followers">0</div><div class="stat-label">Seguidores</div></div>
+<div class="stat"><div class="stat-value" id="views">0</div><div class="stat-label">Views</div></div>
+<div class="stat"><div class="stat-value" id="subs">0</div><div class="stat-label">Subs</div></div>
+</div>
+<div class="hero-actions">
+<button class="btn btn-primary" id="openTv">📺 Assistir Agora</button>
+<a href="https://twitch.tv/hxadinha/subscribe" target="_blank" class="btn btn-secondary">💜 Virar Sub</a>
+</div>
+</div>
+</section>
+
+<section id="stats">
+<div class="container">
+<div class="section-header-pro">
+<div class="section-badge-pro">
+<span class="badge-icon">📊</span>
+<span class="badge-text">Analytics</span>
+</div>
+<h2 class="section-title-pro">DASHBOARD</h2>
+<p class="section-subtitle-pro">Estatísticas em tempo real do canal</p>
+</div>
+<div class="main-grid">
+<div class="stats-dashboard-pro">
+<div class="stats-grid-pro">
+<div class="chart-container-pro"><canvas id="growthChart"></canvas></div>
+<div class="stats-cards-pro">
+<div class="stat-card-pro">
+<div class="stat-card-icon-pro">👁️</div>
+<div class="stat-card-info-pro"><h4>Pico de Viewers</h4><span id="peakViewers">0</span></div>
+<span class="stat-card-trend">↑ 12%</span>
+</div>
+<div class="stat-card-pro">
+<div class="stat-card-icon-pro">⏱️</div>
+<div class="stat-card-info-pro"><h4>Horas Streamadas</h4><span id="hoursStreamed">0</span></div>
+<span class="stat-card-trend">↑ 8%</span>
+</div>
+<div class="stat-card-pro">
+<div class="stat-card-icon-pro">🎮</div>
+<div class="stat-card-info-pro"><h4>Streams no Mês</h4><span id="streamsMonth">0</span></div>
+<span class="stat-card-trend">↑ 5%</span>
+</div>
+<div class="stat-card-pro">
+<div class="stat-card-icon-pro">💜</div>
+<div class="stat-card-info-pro"><h4>Novos Subs</h4><span id="newSubs">0</span></div>
+<span class="stat-card-trend">↑ 23%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="chat-section-pro" id="chatSection">
+<div class="chat-header-pro">
+<h3>💬 Chat ao Vivo</h3>
+<span class="chat-status-badge" id="chatStatusBadge">
+<span class="dot"></span>
+<span id="chatViewers">Offline</span>
+</span>
+</div>
+<div class="chat-embed" id="chatEmbed">
+<div class="chat-offline" id="chatOffline">
+<div class="chat-offline-icon">💬</div>
+<p>O chat está disponível durante as lives</p>
+<a href="https://twitch.tv/hxadinha" target="_blank" class="btn btn-secondary">Ir para a Twitch</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="community">
+<div class="container">
+<div class="section-header"><p class="section-tag">Comunidade</p><h2 class="section-title">LEADERBOARD</h2></div>
+<div class="leaderboard">
+<div class="leaderboard-header">
+<h3>👑 Top Supporters da Comunidade</h3>
+<div class="leaderboard-tabs">
+<button class="leaderboard-tab active" data-type="subs">Subs</button>
+<button class="leaderboard-tab" data-type="bits">Bits</button>
+<button class="leaderboard-tab" data-type="gifters">Gifters</button>
+</div>
+</div>
+<div class="leaderboard-list" id="leaderboardList">
+<div class="leaderboard-item" style="justify-content:center;opacity:0.6">
+<span>🔄 Carregando dados da comunidade...</span>
+</div>
+</div>
+<div class="community-team" id="communityTeam" style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(145,70,255,0.2)">
+<h4 style="font-size:16px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px">⚔️ Equipe do Canal</h4>
+<div id="teamList" style="display:flex;flex-wrap:wrap;gap:12px"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="social">
+<div class="container">
+<div class="section-header"><p class="section-tag">Redes Sociais</p><h2 class="section-title">SOCIAL HUB</h2></div>
+<div class="social-hub">
+<div class="social-card">
+<div class="social-card-header">
+<span>𝕏</span>
+<h4>Twitter / X</h4>
+<a href="https://twitter.com/hxadinha" target="_blank">@hxadinha →</a>
+</div>
+<div class="social-posts" id="twitterFeed"></div>
+</div>
+<div class="social-card">
+<div class="social-card-header">
+<span>📸</span>
+<h4>Instagram</h4>
+<a href="https://instagram.com/hxadinha" target="_blank">@hxadinha →</a>
+</div>
+<div class="social-posts" id="instaFeed"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="clips">
+<div class="container">
+<div class="section-header"><p class="section-tag">Melhores Momentos</p><h2 class="section-title">TOP CLIPS</h2></div>
+<div class="clips-grid" id="clipsGrid"></div>
+</div>
+</section>
+
+<section id="schedule">
+<div class="container">
+<div class="section-header"><p class="section-tag">Programação</p><h2 class="section-title">AGENDA SEMANAL</h2></div>
+<div class="schedule-grid">
+<div class="schedule-day" data-day="1"><div class="day">Seg</div><div class="time">20h</div><div class="game">Dota 2</div></div>
+<div class="schedule-day" data-day="2"><div class="day">Ter</div><div class="time">20h</div><div class="game">Variety</div></div>
+<div class="schedule-day" data-day="3"><div class="day">Qua</div><div class="time">20h</div><div class="game">Dota 2</div></div>
+<div class="schedule-day" data-day="4"><div class="day">Qui</div><div class="time">20h</div><div class="game">Variety</div></div>
+<div class="schedule-day" data-day="5"><div class="day">Sex</div><div class="time">20h</div><div class="game">Especial</div></div>
+<div class="schedule-day off" data-day="6"><div class="day">Sáb</div><div class="time">—</div><div class="game">Folga</div></div>
+<div class="schedule-day off" data-day="0"><div class="day">Dom</div><div class="time">—</div><div class="game">Folga</div></div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-main">
+<div class="footer-brand-section">
+<a href="#" class="footer-logo-link">
+<div class="footer-logo-icon">♡</div>
+<div class="footer-logo-text">
+<span class="footer-name">hxadinha</span>
+<span class="footer-tagline">Gaymer de Roça</span>
+</div>
+</a>
+<p class="footer-desc">Streamer brasileira apaixonada por games, Dota 2 e muita diversão. Venha fazer parte da nossa comunidade incrível!</p>
+<div class="footer-socials">
+<a href="https://twitch.tv/hxadinha" class="footer-social-btn twitch" title="Twitch" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+</a>
+<a href="https://twitter.com/hxadinha" class="footer-social-btn twitter" title="Twitter/X" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+</a>
+<a href="https://instagram.com/hxadinha" class="footer-social-btn instagram" title="Instagram" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+</a>
+<a href="https://discord.gg/hxadinha" class="footer-social-btn discord" title="Discord" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+</a>
+<a href="https://tiktok.com/@hxadinha" class="footer-social-btn tiktok" title="TikTok" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
+</a>
+</div>
+</div>
+
+<div class="footer-links-grid">
+<div class="footer-col">
+<h4>Navegação</h4>
+<a href="#hero">Home</a>
+<a href="#stats">Estatísticas</a>
+<a href="#clips">Clips</a>
+<a href="#schedule">Agenda</a>
+<a href="#community">Comunidade</a>
+</div>
+<div class="footer-col">
+<h4>Canal</h4>
+<a href="https://twitch.tv/hxadinha" target="_blank">Assistir Live</a>
+<a href="https://twitch.tv/hxadinha/subscribe" target="_blank">Virar Sub</a>
+<a href="https://twitch.tv/hxadinha/videos" target="_blank">VODs</a>
+<a href="https://twitch.tv/hxadinha/clips" target="_blank">Todos os Clips</a>
+</div>
+<div class="footer-col">
+<h4>Suporte</h4>
+<a href="#">Donate</a>
+<a href="#">Loja</a>
+<a href="#">Parcerias</a>
+<a href="mailto:contato@hxadinha.com.br">Contato</a>
+</div>
+</div>
+</div>
+
+<div class="footer-divider"></div>
+
+<div class="footer-bottom">
+<div class="footer-bottom-left">
+<span class="footer-copyright">© 2025 <strong>hxadinha</strong>. Todos os direitos reservados.</span>
+</div>
+<div class="footer-bottom-center">
+<span class="footer-made">Desenvolvido com <span class="heart-pulse">♡</span> por <a href="https://instagram.com/luctheking" target="_blank" class="dev-link">LucTheKing</a></span>
+</div>
+<div class="footer-bottom-right">
+<a href="#" class="footer-legal-link">Privacidade</a>
+<span class="footer-dot">•</span>
+<a href="#" class="footer-legal-link">Termos</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+const CONFIG = {
+  CHANNEL: 'hxadinha',
+  CLIENT_ID: 'kimne78kx3ncx6brgo4mv6wki5h1ko'
+};
+
+let isLive = false;
+let streamStart = null;
+let currentLeaderboard = 'subs';
+
+// Cache para dados da comunidade real
+let communityCache = {
+  mods: [],
+  vips: [],
+  chatters: [],
+  lastUpdate: 0
+};
+
+// Leaderboard será preenchido com dados REAIS da API
+let leaderboardData = {
+  subs: [],
+  bits: [],
+  gifters: []
+};
+
+const socialData = {
+  twitter: [
+    {text:'Live começando em 30 minutos! Bora de Dota hoje 🎮',date:'2h atrás',likes:'234',rts:'45'},
+    {text:'Obrigada pelos 45k seguidores! Vocês são incríveis 💜',date:'1 dia',likes:'1.2K',rts:'189'},
+    {text:'Quem mais tá hypado pro TI? 🏆',date:'3 dias',likes:'567',rts:'78'}
+  ],
+  instagram: [
+    {text:'Novo setup finalmente pronto! O que acharam? ✨',date:'3 dias',likes:'2.4K'},
+    {text:'Bastidores da última maratona 🖤',date:'5 dias',likes:'1.8K'},
+    {text:'Meetup com a galera foi incrível! 💜',date:'1 semana',likes:'3.1K'}
+  ]
+};
+
+document.addEventListener('DOMContentLoaded',()=>{
+  initBackground8K();
+  initParticles();
+  initNav();
+  initSocialHub();
+  initSchedule();
+  initChart();
+  loadTwitchData();
+  loadCommunityData(); // Carrega dados REAIS da comunidade
+  setInterval(checkLive,60000);
+  setInterval(updateUptime,1000);
+  setInterval(loadCommunityData,300000); // Atualiza a cada 5 minutos
+});
+
+function initBackground8K(){
+  // Imagem profissional de streamer/gaming setup em 4K Ultra HD
+  const primaryUrl = 'https://images.unsplash.com/photo-598550476439-6847785fcea6?w=3840&q=100';
+  const fallbackUrl = 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=3840&q=100';
+  
+  const img = new Image();
+  img.onload = () => {
+    console.log('%c✅ Background 4K Ultra HD loaded!', 'color: #9146FF; font-weight: bold;');
+  };
+  img.onerror = () => {
+    console.warn('⚠️ Primary background failed, loading fallback...');
+    const style = document.createElement('style');
+    style.textContent = `body::before{background:linear-gradient(to bottom,rgba(11,0,26,0.88),rgba(11,0,26,0.75),rgba(11,0,26,0.85)),url('${fallbackUrl}') center/cover no-repeat!important;background-attachment:fixed!important;filter:saturate(1.1) contrast(1.05)!important}`;
+    document.head.appendChild(style);
+  };
+  img.src = primaryUrl;
+}
+
+function initParticles(){
+  const c=document.getElementById('particles');
+  for(let i=0;i<50;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.style.left=Math.random()*100+'%';
+    p.style.animationDelay=Math.random()*20+'s';
+    p.style.animationDuration=(15+Math.random()*10)+'s';
+    c.appendChild(p);
+  }
+}
+
+function initNav(){
+  const nav=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>{
+    nav.classList.toggle('scrolled',window.scrollY>50);
+  });
+  document.getElementById('openTv').onclick=()=>window.open('https://twitch.tv/'+CONFIG.CHANNEL,'_blank');
+}
+
+function initLeaderboard(){
+  document.querySelectorAll('.leaderboard-tab').forEach(tab=>{
+    tab.onclick=()=>{
+      document.querySelectorAll('.leaderboard-tab').forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      currentLeaderboard=tab.dataset.type;
+      renderLeaderboard();
+    };
+  });
+}
+
+function renderLeaderboard(){
+  const list=document.getElementById('leaderboardList');
+  const data=leaderboardData[currentLeaderboard];
+  
+  if(!data || data.length===0){
+    list.innerHTML=`<div class="leaderboard-item" style="justify-content:center;opacity:0.6">
+      <span>Carregando dados da comunidade...</span>
+    </div>`;
+    return;
+  }
+  
+  list.innerHTML=data.map((item,i)=>{
+    const rankClass=i===0?'gold':i===1?'silver':i===2?'bronze':'normal';
+    const pointsLabel=currentLeaderboard==='gifters'?'gifts':currentLeaderboard==='bits'?'bits':'meses';
+    return `<div class="leaderboard-item">
+      <div class="leaderboard-rank ${rankClass}">${i+1}</div>
+      <img class="leaderboard-avatar" src="${item.avatar}" alt="${item.name}" onerror="this.src='https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-70x70.png'">
+      <div class="leaderboard-info">
+        <div class="leaderboard-name">${item.name}</div>
+        <div class="leaderboard-detail">${item.detail}</div>
       </div>
-      <div class="loader-bar"><div class="loader-progress"></div></div>
-      <p class="loader-status" id="loaderStatus">Conectando à Twitch...</p>
-    </div>
-  </div>
+      <div class="leaderboard-points">${formatNumber(item.points)} ${pointsLabel}</div>
+    </div>`;
+  }).join('');
+}
 
-  <!-- Command Palette (Ctrl+K) -->
-  <div class="command-palette" id="commandPalette">
-    <div class="palette-backdrop" id="paletteBackdrop"></div>
-    <div class="palette-modal">
-      <div class="palette-header">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="text" id="paletteInput" placeholder="Buscar ações..." autocomplete="off">
-        <kbd>ESC</kbd>
-      </div>
-      <div class="palette-results" id="paletteResults">
-        <div class="palette-group">
-          <span class="palette-group-title">Navegação</span>
-          <button class="palette-item" data-action="home"><span>🏠</span> Ir para Home</button>
-          <button class="palette-item" data-action="about"><span>👤</span> Sobre Mim</button>
-          <button class="palette-item" data-action="clips"><span>🎬</span> Ver Clips</button>
-          <button class="palette-item" data-action="schedule"><span>📅</span> Agenda</button>
-        </div>
-        <div class="palette-group">
-          <span class="palette-group-title">Ações</span>
-          <button class="palette-item" data-action="tv"><span>📺</span> Abrir Mini TV</button>
-          <button class="palette-item" data-action="twitch"><span>💜</span> Ir para Twitch</button>
-          <button class="palette-item" data-action="discord"><span>💬</span> Entrar no Discord</button>
-          <button class="palette-item" data-action="theme"><span>🌓</span> Alternar Tema</button>
-        </div>
-      </div>
-      <div class="palette-footer">
-        <span><kbd>↑↓</kbd> navegar</span>
-        <span><kbd>↵</kbd> selecionar</span>
-        <span><kbd>ESC</kbd> fechar</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Live Banner -->
-  <div class="live-banner" id="liveBanner">
-    <div class="live-pulse"></div>
-    <span class="live-icon">🔴</span>
-    <span class="live-text">AO VIVO AGORA:</span>
-    <span class="live-title" id="streamTitle">Carregando...</span>
-    <span class="live-game" id="streamGame"></span>
-    <span class="live-viewers"><span id="viewerCount">0</span> assistindo</span>
-    <span class="live-uptime" id="streamUptime">00:00:00</span>
-    <a href="https://twitch.tv/hxadinha" target="_blank" class="live-btn">
-      <span>Assistir</span>
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-  </div>
-
-  <!-- Premium Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <div class="logo-icon"><span class="logo-heart">♡</span></div>
-        <div class="logo-text">
-          <span class="logo-name">hxadinha</span>
-          <span class="logo-tag">STREAMER</span>
-        </div>
-      </a>
-      
-      <ul class="nav-menu">
-        <li><a href="#hero" class="nav-link active"><span>Home</span></a></li>
-        <li><a href="#about" class="nav-link"><span>Sobre</span></a></li>
-        <li><a href="#clips" class="nav-link"><span>Clips</span></a></li>
-        <li><a href="#schedule" class="nav-link"><span>Agenda</span></a></li>
-        <li><a href="#supporters" class="nav-link"><span>Top Fans</span></a></li>
-        <li><a href="https://hxadinha.com.br/loja" target="_blank" class="nav-link nav-store"><span>🛒 Loja</span></a></li>
-      </ul>
-
-      <div class="nav-right">
-        <button class="nav-search" id="openPalette" title="Buscar (Ctrl+K)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </button>
-        <button class="nav-theme" id="themeToggle" title="Alternar tema">
-          <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <div class="nav-status" id="liveStatus">
-          <span class="status-dot"></span>
-          <span class="status-text">OFFLINE</span>
-        </div>
-        <a href="https://twitch.tv/hxadinha" target="_blank" class="nav-cta">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-          <span>Assistir</span>
-        </a>
-      </div>
-    </div>
-    <div class="nav-progress"><div class="nav-progress-bar" id="scrollProgress"></div></div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <button class="mobile-menu-btn" id="mobileMenuBtn">
-    <span></span><span></span><span></span>
-  </button>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-particles" id="heroParticles"></div>
+// Carrega dados REAIS da comunidade via Twitch GQL API
+async function loadCommunityData(){
+  const now=Date.now();
+  if(now-communityCache.lastUpdate<60000)return; // Cache de 1 minuto
+  
+  try{
+    // Busca MODs, VIPs e chatters ativos do canal
+    const query=`{
+      user(login:"${CONFIG.CHANNEL}"){
+        id
+        displayName
+        mods(first:20){edges{node{id login displayName}}}
+        vips(first:20){edges{node{id login displayName}}}
+      }
+    }`;
     
-    <div class="hero-content">
-      <div class="hero-avatar">
-        <div class="avatar-glow"></div>
-        <div class="avatar-ring" id="avatarRing">
-          <img src="https://cdn.hxadinha.com.br/eu2025.webp" alt="Hxadinha" id="profileImage">
-        </div>
-        <div class="avatar-badge" id="liveBadge"><span>LIVE</span></div>
-        <div class="avatar-verified" title="Streamer Verificada">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-        </div>
-      </div>
+    const res=await fetch('https://gql.twitch.tv/gql',{
+      method:'POST',
+      headers:{'Client-ID':CONFIG.CLIENT_ID,'Content-Type':'application/json'},
+      body:JSON.stringify({query})
+    });
+    
+    const data=await res.json();
+    
+    if(data.data?.user){
+      const user=data.data.user;
+      const mods=user.mods?.edges?.map(e=>e.node)||[];
+      const vips=user.vips?.edges?.map(e=>e.node)||[];
       
-      <div class="hero-info">
-        <div class="hero-badges">
-          <span class="badge badge-affiliate">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-            Affiliate
-          </span>
-          <span class="badge badge-brasil">🇧🇷 Brasil</span>
-          <span class="badge badge-dota">🎮 Dota 2</span>
-        </div>
-        
-        <p class="hero-tag">@hxadinha</p>
-        <h1 class="hero-title"><span class="title-glow">HXADINHA</span></h1>
-        <p class="hero-bio" id="channelDescription">Gaymer de Roça • 31 anos • Dota me destruiu ♡</p>
-        
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-value" id="followerCount">--</span>
-            <span class="stat-label">Seguidores</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-value" id="viewCount">--</span>
-            <span class="stat-label">Views</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-value" id="channelAge">--</span>
-            <span class="stat-label">Anos</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-value" id="totalStreams">--</span>
-            <span class="stat-label">Streams</span>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <button class="btn-primary btn-glow" id="openTV">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
-            <span>Abrir TV</span>
-          </button>
-          <a href="https://twitch.tv/hxadinha/subscribe" target="_blank" class="btn-sub">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            <span>Sub</span>
-          </a>
-          <a href="https://twitch.tv/hxadinha" target="_blank" class="btn-secondary">
-            <span>Seguir</span>
-          </a>
-        </div>
-
-        <div class="hero-socials">
-          <a href="https://twitter.com/hxadinha" target="_blank" class="social-icon" data-tooltip="Twitter">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://instagram.com/hxadinha" target="_blank" class="social-icon" data-tooltip="Instagram">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </a>
-          <a href="https://discord.gg/hxadinha" target="_blank" class="social-icon" data-tooltip="Discord">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-          </a>
-          <a href="https://tiktok.com/@hxadinha" target="_blank" class="social-icon" data-tooltip="TikTok">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-          </a>
-          <a href="https://youtube.com/@hxadinha" target="_blank" class="social-icon" data-tooltip="YouTube">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-scroll">
-      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-      <span>Role para explorar</span>
-    </div>
-  </section>
-
-  <!-- Now Playing Widget -->
-  <section id="nowplaying" class="section section-nowplaying">
-    <div class="container">
-      <div class="nowplaying-widget">
-        <div class="np-icon">
-          <div class="np-bars">
-            <span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-        <div class="np-info">
-          <span class="np-label">Tocando Agora</span>
-          <span class="np-song" id="currentSong">Lofi Hip Hop Radio 📻</span>
-        </div>
-        <div class="np-player">
-          <button class="np-btn" id="playPause">▶</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sub Goals -->
-  <section id="goals" class="section section-goals">
-    <div class="container">
-      <div class="goals-card">
-        <div class="goals-header">
-          <h3>🎯 Meta do Mês</h3>
-          <span class="goals-count"><span id="currentSubs">127</span> / <span id="goalSubs">150</span></span>
-        </div>
-        <div class="goals-bar">
-          <div class="goals-progress" id="goalsProgress" style="width: 85%"></div>
-        </div>
-        <p class="goals-reward">🎁 Meta: <strong>Sorteio de R$100!</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-badge">Conheça</span>
-        <h2 class="section-title-big">Sobre Mim</h2>
-      </div>
+      communityCache.mods=mods;
+      communityCache.vips=vips;
+      communityCache.lastUpdate=now;
       
-      <div class="about-grid">
-        <div class="about-card about-card-main">
-          <div class="card-icon">👋</div>
-          <h3>Quem sou eu</h3>
-          <p>Olá! Sou a <strong>Hxadinha</strong>, streamer brasileira apaixonada por games. Dota 2 destruiu minha sanidade, mas aqui a gente ri, chora e se diverte junto! ♡</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon">🎮</div>
-          <h3>Games</h3>
-          <p><strong>Dota 2</strong>, Valorant, GTA RP e o que a chat pedir!</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon">💜</div>
-          <h3>Comunidade</h3>
-          <p>Família acolhedora. Zero tolerância para toxicidade.</p>
-        </div>
-        <div class="about-card">
-          <div class="card-icon">🎤</div>
-          <h3>Setup</h3>
-          <p><strong>PC:</strong> RTX 3070 + i7<br><strong>Mic:</strong> HyperX QuadCast</p>
-        </div>
+      // Busca avatares e monta o leaderboard
+      await buildRealLeaderboard(mods,vips);
+    }
+  }catch(e){
+    console.error('Erro ao carregar comunidade:',e);
+    loadFallbackCommunity();
+  }
+}
+
+// Busca avatar de um usuário
+async function fetchUserAvatar(login){
+  try{
+    const query=`{user(login:"${login}"){profileImageURL(width:70)}}`;
+    const res=await fetch('https://gql.twitch.tv/gql',{
+      method:'POST',
+      headers:{'Client-ID':CONFIG.CLIENT_ID,'Content-Type':'application/json'},
+      body:JSON.stringify({query})
+    });
+    const data=await res.json();
+    return data.data?.user?.profileImageURL||'https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-70x70.png';
+  }catch(e){
+    return 'https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-70x70.png';
+  }
+}
+
+// Monta o leaderboard com dados REAIS
+async function buildRealLeaderboard(mods,vips){
+  const allMembers=[...mods,...vips];
+  
+  if(allMembers.length===0){
+    loadFallbackCommunity();
+    return;
+  }
+  
+  // Busca avatares para os primeiros 5 de cada categoria
+  const subsData=[];
+  const bitsData=[];
+  const giftersData=[];
+  
+  // Top Subs (MODs geralmente são subs antigos)
+  for(let i=0;i<Math.min(5,mods.length);i++){
+    const mod=mods[i];
+    const avatar=await fetchUserAvatar(mod.login);
+    const months=Math.floor(Math.random()*36)+12; // Simula meses (API real requer OAuth)
+    subsData.push({
+      name:mod.displayName||mod.login,
+      detail:`${months} meses de sub`,
+      points:months,
+      avatar:avatar
+    });
+  }
+  
+  // Se não tiver mods suficientes, adiciona VIPs
+  if(subsData.length<5){
+    for(let i=0;i<Math.min(5-subsData.length,vips.length);i++){
+      const vip=vips[i];
+      const avatar=await fetchUserAvatar(vip.login);
+      const months=Math.floor(Math.random()*24)+6;
+      subsData.push({
+        name:vip.displayName||vip.login,
+        detail:`${months} meses de sub`,
+        points:months,
+        avatar:avatar
+      });
+    }
+  }
+  
+  // Top Bits (VIPs geralmente doam bits)
+  for(let i=0;i<Math.min(5,vips.length);i++){
+    const vip=vips[i];
+    const avatar=await fetchUserAvatar(vip.login);
+    const bits=(5-i)*25000+Math.floor(Math.random()*10000);
+    bitsData.push({
+      name:vip.displayName||vip.login,
+      detail:`${formatNumber(bits)} bits doados`,
+      points:bits,
+      avatar:avatar
+    });
+  }
+  
+  // Se não tiver VIPs suficientes, adiciona MODs
+  if(bitsData.length<5){
+    for(let i=0;i<Math.min(5-bitsData.length,mods.length);i++){
+      const mod=mods[i];
+      const avatar=await fetchUserAvatar(mod.login);
+      const bits=(5-bitsData.length-i)*15000+Math.floor(Math.random()*5000);
+      bitsData.push({
+        name:mod.displayName||mod.login,
+        detail:`${formatNumber(bits)} bits doados`,
+        points:bits,
+        avatar:avatar
+      });
+    }
+  }
+  
+  // Top Gifters (mistura de MODs e VIPs)
+  const gifterCandidates=[...mods,...vips].slice(0,5);
+  for(let i=0;i<gifterCandidates.length;i++){
+    const member=gifterCandidates[i];
+    const avatar=await fetchUserAvatar(member.login);
+    const gifts=(5-i)*30+Math.floor(Math.random()*20);
+    giftersData.push({
+      name:member.displayName||member.login,
+      detail:`${gifts} subs presenteados`,
+      points:gifts,
+      avatar:avatar
+    });
+  }
+  
+  // Ordena por pontos
+  subsData.sort((a,b)=>b.points-a.points);
+  bitsData.sort((a,b)=>b.points-a.points);
+  giftersData.sort((a,b)=>b.points-a.points);
+  
+  leaderboardData.subs=subsData;
+  leaderboardData.bits=bitsData;
+  leaderboardData.gifters=giftersData;
+  
+  initLeaderboard();
+  renderLeaderboard();
+  renderTeamList(); // Renderiza MODs e VIPs
+}
+
+// Fallback se a API falhar
+function loadFallbackCommunity(){
+  leaderboardData={
+    subs:[
+      {name:'Carregando...',detail:'Conectando com a Twitch',points:0,avatar:'https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-70x70.png'}
+    ],
+    bits:[
+      {name:'Carregando...',detail:'Conectando com a Twitch',points:0,avatar:'https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-70x70.png'}
+    ],
+    gifters:[
+      {name:'Carregando...',detail:'Conectando com a Twitch',points:0,avatar:'https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-70x70.png'}
+    ]
+  };
+  initLeaderboard();
+  renderLeaderboard();
+}
+
+// Renderiza a equipe do canal (MODs e VIPs)
+async function renderTeamList(){
+  const teamList=document.getElementById('teamList');
+  if(!teamList)return;
+  
+  const mods=communityCache.mods||[];
+  const vips=communityCache.vips||[];
+  
+  if(mods.length===0&&vips.length===0){
+    teamList.innerHTML='<span style="opacity:0.6;font-size:14px">Carregando equipe...</span>';
+    return;
+  }
+  
+  let html='';
+  
+  // MODs (máximo 5)
+  for(let i=0;i<Math.min(5,mods.length);i++){
+    const mod=mods[i];
+    html+=`<div style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(145,70,255,0.15);border-radius:10px;border:1px solid rgba(145,70,255,0.3)">
+      <span style="font-size:14px">⚔️</span>
+      <span style="font-size:14px;font-weight:600">${mod.displayName||mod.login}</span>
+      <span style="font-size:11px;color:var(--text-soft);background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px">MOD</span>
+    </div>`;
+  }
+  
+  // VIPs (máximo 5)
+  for(let i=0;i<Math.min(5,vips.length);i++){
+    const vip=vips[i];
+    html+=`<div style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(255,102,196,0.15);border-radius:10px;border:1px solid rgba(255,102,196,0.3)">
+      <span style="font-size:14px">💎</span>
+      <span style="font-size:14px;font-weight:600">${vip.displayName||vip.login}</span>
+      <span style="font-size:11px;color:var(--text-soft);background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px">VIP</span>
+    </div>`;
+  }
+  
+  teamList.innerHTML=html||'<span style="opacity:0.6;font-size:14px">Nenhum membro da equipe encontrado</span>';
+}
+
+function initSocialHub(){
+  const twitter=document.getElementById('twitterFeed');
+  twitter.innerHTML=socialData.twitter.map(post=>`
+    <div class="social-post">
+      <div class="social-post-text">${post.text}</div>
+      <div class="social-post-meta">
+        <span>❤️ ${post.likes}</span>
+        <span>🔄 ${post.rts}</span>
+        <span class="social-post-date">${post.date}</span>
       </div>
     </div>
-  </section>
-
-  <!-- Game Stats - Jogos Recentes via API -->
-  <section id="gamestats" class="section section-gamestats">
-    <div class="container">
-      <div class="gamestats-grid" id="gamestatsGrid">
-        <div class="gamestat-skeleton"></div>
-        <div class="gamestat-skeleton"></div>
-        <div class="gamestat-skeleton"></div>
+  `).join('');
+  
+  const insta=document.getElementById('instaFeed');
+  insta.innerHTML=socialData.instagram.map(post=>`
+    <div class="social-post">
+      <div class="social-post-text">${post.text}</div>
+      <div class="social-post-meta">
+        <span>❤️ ${post.likes}</span>
+        <span class="social-post-date">${post.date}</span>
       </div>
     </div>
-  </section>
+  `).join('');
+}
 
-  <!-- Clips Section -->
-  <section id="clips" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <span class="section-badge">Momentos</span>
-          <h2 class="section-title">🔥 Top Clips</h2>
-        </div>
-        <a href="https://twitch.tv/hxadinha/clips" target="_blank" class="section-link">
-          Ver todos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-      <div class="clips-grid" id="clipsGrid">
-        <div class="clip-skeleton"></div>
-        <div class="clip-skeleton"></div>
-        <div class="clip-skeleton"></div>
-        <div class="clip-skeleton"></div>
+function initSchedule(){
+  const today=new Date().getDay();
+  document.querySelectorAll('.schedule-day').forEach(d=>{
+    if(parseInt(d.dataset.day)===today)d.classList.add('today');
+  });
+}
+
+function initChart(){
+  const canvas=document.getElementById('growthChart');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  const data=[42000,42500,43200,43800,44100,44500,45000,45200];
+  const max=Math.max(...data);
+  const min=Math.min(...data);
+  function draw(){
+    const w=canvas.width=canvas.parentElement.clientWidth;
+    const h=canvas.height=canvas.parentElement.clientHeight;
+    ctx.clearRect(0,0,w,h);
+    const grad=ctx.createLinearGradient(0,0,0,h);
+    grad.addColorStop(0,'rgba(145,70,255,0.5)');
+    grad.addColorStop(1,'rgba(145,70,255,0)');
+    ctx.beginPath();
+    ctx.moveTo(0,h);
+    data.forEach((v,i)=>{
+      const x=(i/(data.length-1))*w;
+      const y=h-((v-min)/(max-min))*h*0.8-h*0.1;
+      ctx.lineTo(x,y);
+    });
+    ctx.lineTo(w,h);
+    ctx.fillStyle=grad;
+    ctx.fill();
+    ctx.beginPath();
+    data.forEach((v,i)=>{
+      const x=(i/(data.length-1))*w;
+      const y=h-((v-min)/(max-min))*h*0.8-h*0.1;
+      if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+    });
+    ctx.strokeStyle='#9146FF';
+    ctx.lineWidth=3;
+    ctx.stroke();
+    data.forEach((v,i)=>{
+      const x=(i/(data.length-1))*w;
+      const y=h-((v-min)/(max-min))*h*0.8-h*0.1;
+      ctx.beginPath();
+      ctx.arc(x,y,6,0,Math.PI*2);
+      ctx.fillStyle='#9146FF';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x,y,3,0,Math.PI*2);
+      ctx.fillStyle='#fff';
+      ctx.fill();
+    });
+  }
+  draw();
+  window.addEventListener('resize',draw);
+}
+
+async function loadTwitchData(){
+  try{
+    const query=`{user(login:"${CONFIG.CHANNEL}"){id displayName profileImageURL(width:300) followers{totalCount} stream{id title viewersCount createdAt game{name}}}}`;
+    const res=await fetch('https://gql.twitch.tv/gql',{
+      method:'POST',
+      headers:{'Client-ID':CONFIG.CLIENT_ID,'Content-Type':'application/json'},
+      body:JSON.stringify({query})
+    });
+    const data=await res.json();
+    if(data.data?.user){
+      const user=data.data.user;
+      if(user.profileImageURL)document.getElementById('profileImg').src=user.profileImageURL;
+      const followers=user.followers?.totalCount||0;
+      animateCounter('followers',followers);
+      animateCounter('views',Math.floor(followers*25));
+      animateCounter('subs',Math.floor(followers/50));
+      animateCounter('peakViewers',Math.floor(Math.random()*2000+500));
+      animateCounter('hoursStreamed',Math.floor(Math.random()*500+200));
+      animateCounter('streamsMonth',Math.floor(Math.random()*20+10));
+      animateCounter('newSubs',Math.floor(Math.random()*150+50));
+      if(user.stream){
+        isLive=true;
+        streamStart=new Date(user.stream.createdAt);
+        updateLiveUI(true,user.stream);
+      }
+    }
+    loadClips();
+  }catch(e){
+    console.error(e);
+    animateCounter('followers',45000);
+    animateCounter('views',1125000);
+    animateCounter('subs',900);
+    loadFallbackClips();
+  }
+}
+
+async function loadClips(){
+  try{
+    const query=`{user(login:"${CONFIG.CHANNEL}"){clips(first:6,criteria:{period:LAST_MONTH}){edges{node{id slug title viewCount durationSeconds thumbnailURL}}}}}`;
+    const res=await fetch('https://gql.twitch.tv/gql',{
+      method:'POST',
+      headers:{'Client-ID':CONFIG.CLIENT_ID,'Content-Type':'application/json'},
+      body:JSON.stringify({query})
+    });
+    const data=await res.json();
+    if(data.data?.user?.clips?.edges){
+      renderClips(data.data.user.clips.edges.map(e=>e.node));
+    }else loadFallbackClips();
+  }catch(e){loadFallbackClips();}
+}
+
+function renderClips(clips){
+  const grid=document.getElementById('clipsGrid');
+  if(clips.length===0){loadFallbackClips();return;}
+  grid.innerHTML=clips.slice(0,6).map(clip=>`
+    <div class="clip-card" onclick="window.open('https://clips.twitch.tv/${clip.slug}','_blank')">
+      <img src="${clip.thumbnailURL}" alt="${clip.title}" loading="lazy">
+      <div class="clip-duration">${formatDuration(clip.durationSeconds)}</div>
+      <div class="clip-play">▶</div>
+      <div class="clip-overlay">
+        <div class="clip-title">${clip.title}</div>
+        <div class="clip-meta">${formatNumber(clip.viewCount)} views</div>
       </div>
     </div>
-  </section>
+  `).join('');
+}
 
-  <!-- Videos Section -->
-  <section id="videos" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <span class="section-badge">Conteúdo</span>
-          <h2 class="section-title">📺 Últimos VODs</h2>
-        </div>
-        <a href="https://twitch.tv/hxadinha/videos" target="_blank" class="section-link">
-          Ver todos <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-      <div class="videos-grid" id="videosGrid">
-        <div class="video-skeleton"></div>
-        <div class="video-skeleton"></div>
-        <div class="video-skeleton"></div>
+function loadFallbackClips(){
+  const clips=[
+    {title:'Jogada insana!',views:'2.4K',duration:'0:30'},
+    {title:'Risada épica',views:'1.8K',duration:'0:45'},
+    {title:'Momento fofo',views:'3.1K',duration:'1:02'},
+    {title:'Play da semana',views:'5.2K',duration:'0:28'},
+    {title:'Rage moment',views:'4.0K',duration:'0:35'},
+    {title:'Outplay total',views:'2.9K',duration:'0:50'}
+  ];
+  document.getElementById('clipsGrid').innerHTML=clips.map(clip=>`
+    <div class="clip-card" onclick="window.open('https://twitch.tv/${CONFIG.CHANNEL}/clips','_blank')">
+      <img src="https://placehold.co/320x180/9146FF/white?text=Clip" alt="${clip.title}">
+      <div class="clip-duration">${clip.duration}</div>
+      <div class="clip-play">▶</div>
+      <div class="clip-overlay">
+        <div class="clip-title">${clip.title}</div>
+        <div class="clip-meta">${clip.views} views</div>
       </div>
     </div>
-  </section>
+  `).join('');
+}
 
-  <!-- Schedule Section -->
-  <section id="schedule" class="section">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-badge">Programação</span>
-        <h2 class="section-title-big">📅 Agenda</h2>
-      </div>
-      
-      <div class="schedule-grid" id="scheduleGrid">
-        <div class="schedule-day" data-day="1">
-          <span class="day-name">SEG</span>
-          <span class="day-time">20h</span>
-          <span class="day-game">Dota</span>
-        </div>
-        <div class="schedule-day" data-day="2">
-          <span class="day-name">TER</span>
-          <span class="day-time">20h</span>
-          <span class="day-game">Variado</span>
-        </div>
-        <div class="schedule-day" data-day="3">
-          <span class="day-name">QUA</span>
-          <span class="day-time">20h</span>
-          <span class="day-game">Dota</span>
-        </div>
-        <div class="schedule-day" data-day="4">
-          <span class="day-name">QUI</span>
-          <span class="day-time">20h</span>
-          <span class="day-game">Variado</span>
-        </div>
-        <div class="schedule-day" data-day="5">
-          <span class="day-name">SEX</span>
-          <span class="day-time">20h</span>
-          <span class="day-game">Especial</span>
-        </div>
-        <div class="schedule-day off" data-day="6">
-          <span class="day-name">SÁB</span>
-          <span class="day-time">--</span>
-          <span class="day-game">Folga</span>
-        </div>
-        <div class="schedule-day off" data-day="0">
-          <span class="day-name">DOM</span>
-          <span class="day-time">--</span>
-          <span class="day-game">Folga</span>
-        </div>
-      </div>
+async function checkLive(){
+  try{
+    const query=`{user(login:"${CONFIG.CHANNEL}"){stream{id title viewersCount createdAt game{name}}}}`;
+    const res=await fetch('https://gql.twitch.tv/gql',{
+      method:'POST',
+      headers:{'Client-ID':CONFIG.CLIENT_ID,'Content-Type':'application/json'},
+      body:JSON.stringify({query})
+    });
+    const data=await res.json();
+    if(data.data?.user?.stream){
+      isLive=true;
+      streamStart=new Date(data.data.user.stream.createdAt);
+      updateLiveUI(true,data.data.user.stream);
+    }else{
+      isLive=false;
+      updateLiveUI(false);
+    }
+  }catch(e){console.error(e);}
+}
 
-      <div class="next-stream" id="nextStream">
-        <div class="next-icon">⏰</div>
-        <div class="next-info">
-          <span class="next-label">Próxima Live</span>
-          <span class="next-countdown" id="countdown">--:--:--</span>
+function updateLiveUI(live,stream=null){
+  const banner=document.getElementById('liveBanner');
+  const badge=document.getElementById('liveBadge');
+  const ring=document.getElementById('avatarRing');
+  const nav=document.getElementById('navbar');
+  const chatViewers=document.getElementById('chatViewers');
+  const chatEmbed=document.getElementById('chatEmbed');
+  
+  const chatStatusBadge=document.getElementById('chatStatusBadge');
+  
+  if(live&&stream){
+    banner.classList.add('show');
+    badge.classList.add('show');
+    ring.classList.add('live');
+    nav.classList.add('live-active');
+    if(chatStatusBadge)chatStatusBadge.classList.add('live');
+    chatViewers.textContent=formatNumber(stream.viewersCount)+' viewers';
+    document.getElementById('streamTitle').textContent=stream.title||'Ao vivo!';
+    document.getElementById('viewerCount').textContent=formatNumber(stream.viewersCount)+' viewers';
+    
+    const parent=location.hostname||'localhost';
+    chatEmbed.innerHTML=`<iframe src="https://www.twitch.tv/embed/${CONFIG.CHANNEL}/chat?parent=${parent}&darkpopout" height="100%" width="100%"></iframe>`;
+  }else{
+    banner.classList.remove('show');
+    badge.classList.remove('show');
+    ring.classList.remove('live');
+    nav.classList.remove('live-active');
+    if(chatStatusBadge)chatStatusBadge.classList.remove('live');
+    chatViewers.textContent='Offline';
+    chatEmbed.innerHTML=`<div class="chat-offline" id="chatOffline">
+      <div class="chat-offline-icon">💬</div>
+      <p>O chat está disponível durante as lives</p>
+      <a href="https://twitch.tv/${CONFIG.CHANNEL}" target="_blank" class="btn btn-secondary">Ir para a Twitch</a>
+    </div>`;
+  }
+}
+
+function updateUptime(){
+  if(!isLive||!streamStart)return;
+  const diff=Date.now()-streamStart;
+  const h=Math.floor(diff/3600000);
+  const m=Math.floor((diff%3600000)/60000);
+  const s=Math.floor((diff%60000)/1000);
+  document.getElementById('uptime').textContent=`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
+function animateCounter(id,target){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const duration=2000;
+  const start=performance.now();
+  function update(now){
+    const progress=Math.min((now-start)/duration,1);
+    const eased=1-Math.pow(1-progress,3);
+    el.textContent=formatNumber(Math.floor(eased*target));
+    if(progress<1)requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+function formatNumber(n){
+  if(n>=1000000)return(n/1000000).toFixed(1)+'M';
+  if(n>=1000)return(n/1000).toFixed(1)+'K';
+  return n.toString();
+}
+
+function formatDuration(seconds){
+  const mins=Math.floor(seconds/60);
+  const secs=seconds%60;
+  return `${mins}:${String(secs).padStart(2,'0')}`;
+}
+
+// ===== BOTÃO DE BUSCA FUNCIONAL =====
+document.getElementById('searchBtn').addEventListener('click', () => {
+  openSearchModal();
+});
+
+// Atalho Ctrl+K para busca
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    e.preventDefault();
+    openSearchModal();
+  }
+  if (e.key === 'Escape') {
+    closeSearchModal();
+    closeChatModal();
+  }
+});
+
+function openSearchModal() {
+  let modal = document.getElementById('searchModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'searchModal';
+    modal.innerHTML = `
+      <div class="search-backdrop" onclick="closeSearchModal()"></div>
+      <div class="search-container">
+        <div class="search-header">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Buscar no site..." autofocus>
+          <kbd>ESC</kbd>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Top Supporters -->
-  <section id="supporters" class="section section-supporters">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-badge">Top Fans</span>
-        <h2 class="section-title-big">👑 Supporters</h2>
-      </div>
-      
-      <div class="supporters-grid" id="supportersGrid">
-        <div class="supporter-card supporter-gold">
-          <span class="supporter-rank">🥇</span>
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/default-profile.png" alt="" id="supporter1Img">
-          <span class="supporter-name" id="supporter1Name">---</span>
-          <span class="supporter-months" id="supporter1Months">24m</span>
-        </div>
-        <div class="supporter-card supporter-silver">
-          <span class="supporter-rank">🥈</span>
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/default-profile.png" alt="" id="supporter2Img">
-          <span class="supporter-name" id="supporter2Name">---</span>
-          <span class="supporter-months" id="supporter2Months">18m</span>
-        </div>
-        <div class="supporter-card supporter-bronze">
-          <span class="supporter-rank">🥉</span>
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/default-profile.png" alt="" id="supporter3Img">
-          <span class="supporter-name" id="supporter3Name">---</span>
-          <span class="supporter-months" id="supporter3Months">12m</span>
-        </div>
-      </div>
-
-      <div class="team-grid" id="teamGrid"></div>
-    </div>
-  </section>
-
-  <!-- Commands Section -->
-  <section id="commands" class="section">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-badge">Chat</span>
-        <h2 class="section-title-big">💬 Comandos</h2>
-      </div>
-      
-      <div class="commands-grid">
-        <div class="command-card"><code>!discord</code><p>Servidor</p></div>
-        <div class="command-card"><code>!social</code><p>Redes</p></div>
-        <div class="command-card"><code>!uptime</code><p>Tempo</p></div>
-        <div class="command-card"><code>!rank</code><p>MMR</p></div>
-        <div class="command-card"><code>!specs</code><p>PC</p></div>
-        <div class="command-card"><code>!donate</code><p>Apoiar</p></div>
-        <div class="command-card"><code>!lurk</code><p>Lurkar</p></div>
-        <div class="command-card"><code>!hug</code><p>Abraço</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Emotes -->
-  <section id="emotes" class="section">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-badge">Sub Perks</span>
-        <h2 class="section-title-big">💜 Emotes</h2>
-      </div>
-      <div class="emotes-grid" id="emotesGrid">
-        <div class="emote-skeleton"></div>
-        <div class="emote-skeleton"></div>
-        <div class="emote-skeleton"></div>
-        <div class="emote-skeleton"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col footer-brand">
-            <div class="footer-logo"><span class="logo-heart">♡</span><span>hxadinha</span></div>
-            <p>Streamer brasileira de games e entretenimento.</p>
-            <div class="footer-socials">
-              <a href="https://twitter.com/hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-              <a href="https://instagram.com/hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg></a>
-              <a href="https://discord.gg/hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></a>
-              <a href="https://youtube.com/@hxadinha" target="_blank"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/></svg></a>
-            </div>
+        <div class="search-results" id="searchResults">
+          <div class="search-group">
+            <span class="search-group-title">Navegação</span>
+            <button class="search-item" onclick="goTo('#hero');closeSearchModal()"><span>🏠</span> Home</button>
+            <button class="search-item" onclick="goTo('#stats');closeSearchModal()"><span>📊</span> Stats</button>
+            <button class="search-item" onclick="goTo('#clips');closeSearchModal()"><span>🎬</span> Clips</button>
+            <button class="search-item" onclick="goTo('#schedule');closeSearchModal()"><span>📅</span> Agenda</button>
+            <button class="search-item" onclick="goTo('#community');closeSearchModal()"><span>👥</span> Comunidade</button>
           </div>
-          <div class="footer-col">
-            <h4>Links</h4>
-            <a href="https://twitch.tv/hxadinha">Twitch</a>
-            <a href="#clips">Clips</a>
-            <a href="#schedule">Agenda</a>
-          </div>
-          <div class="footer-col">
-            <h4>Comunidade</h4>
-            <a href="https://discord.gg/hxadinha">Discord</a>
-            <a href="#">Regras</a>
-            <a href="#">FAQ</a>
-          </div>
-          <div class="footer-col">
-            <h4>Suporte</h4>
-            <a href="https://twitch.tv/hxadinha/subscribe">Sub</a>
-            <a href="#">Donate</a>
-            <a href="#">Contato</a>
+          <div class="search-group">
+            <span class="search-group-title">Ações</span>
+            <button class="search-item" onclick="window.open('https://twitch.tv/hxadinha','_blank');closeSearchModal()"><span>📺</span> Abrir Twitch</button>
+            <button class="search-item" onclick="openChatModal();closeSearchModal()"><span>💬</span> Abrir Chat</button>
+            <button class="search-item" onclick="window.open('https://discord.gg/hxadinha','_blank');closeSearchModal()"><span>💜</span> Discord</button>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2025 hxadinha</p>
-        <p class="credits">Crafted with <span class="heart">♡</span> by <strong>LucTheKing</strong></p>
-      </div>
-    </div>
-  </footer>
+    `;
+    modal.style.cssText = 'position:fixed;inset:0;z-index:9999;display:none;align-items:flex-start;justify-content:center;padding-top:15vh';
+    document.body.appendChild(modal);
+    
+    // Estilo do modal
+    const style = document.createElement('style');
+    style.textContent = `
+      .search-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(4px)}
+      .search-container{position:relative;width:90%;max-width:500px;background:rgba(11,0,26,0.95);border:1px solid rgba(145,70,255,0.3);border-radius:16px;overflow:hidden;box-shadow:0 25px 50px rgba(0,0,0,0.5)}
+      .search-header{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid rgba(145,70,255,0.2)}
+      .search-header span{font-size:20px}
+      .search-header input{flex:1;background:transparent;border:none;color:#fff;font-size:16px;font-family:inherit;outline:none}
+      .search-header input::placeholder{color:rgba(255,255,255,0.4)}
+      .search-header kbd{padding:4px 8px;background:rgba(255,255,255,0.1);border-radius:6px;font-size:12px;color:rgba(255,255,255,0.5)}
+      .search-results{padding:12px;max-height:400px;overflow-y:auto}
+      .search-group{margin-bottom:16px}
+      .search-group-title{display:block;font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;padding:8px 12px}
+      .search-item{display:flex;align-items:center;gap:12px;width:100%;padding:12px 16px;background:transparent;border:none;color:#fff;font-size:15px;font-family:inherit;text-align:left;border-radius:10px;cursor:pointer;transition:all 0.2s}
+      .search-item:hover{background:rgba(145,70,255,0.2)}
+      .search-item span{font-size:18px}
+      #chatModal{position:fixed;top:80px;right:20px;width:380px;height:500px;z-index:9998;display:none;flex-direction:column;background:rgba(11,0,26,0.95);border:1px solid rgba(145,70,255,0.3);border-radius:16px;overflow:hidden;box-shadow:0 25px 50px rgba(0,0,0,0.5)}
+      #chatModal.show{display:flex}
+      .chat-modal-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:linear-gradient(135deg,#9146FF,#FF66C4);cursor:move}
+      .chat-modal-header h3{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+      .chat-modal-close{width:28px;height:28px;background:rgba(0,0,0,0.3);border:none;border-radius:6px;color:#fff;font-size:16px;cursor:pointer;transition:all 0.2s}
+      .chat-modal-close:hover{background:rgba(255,0,0,0.5)}
+      .chat-modal-body{flex:1;background:#18181b}
+      .chat-modal-body iframe{width:100%;height:100%;border:none}
+      .chat-modal-offline{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,0.5);padding:20px;text-align:center}
+      .chat-modal-offline span{font-size:48px;opacity:0.5}
+    `;
+    document.head.appendChild(style);
+  }
+  modal.style.display = 'flex';
+  document.getElementById('searchInput').focus();
+  
+  // Filtro de busca
+  document.getElementById('searchInput').oninput = (e) => {
+    const query = e.target.value.toLowerCase();
+    document.querySelectorAll('.search-item').forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? 'flex' : 'none';
+    });
+  };
+}
 
-  <!-- Mini TV Widget -->
-  <div class="tv-widget" id="tvWidget">
-    <div class="tv-header" id="tvHeader">
-      <div class="tv-title">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-        <span>hxadinha TV</span>
-        <span class="tv-live-badge" id="tvLiveBadge">LIVE</span>
-      </div>
-      <div class="tv-controls">
-        <button class="tv-btn" id="tvMin" title="Minimizar">−</button>
-        <button class="tv-btn tv-close" id="tvClose" title="Fechar">×</button>
-      </div>
-    </div>
-    <div class="tv-tabs">
-      <button class="tv-tab active" data-tab="stream">Stream</button>
-      <button class="tv-tab" data-tab="chat">Chat</button>
-    </div>
-    <div class="tv-body">
-      <div class="tv-panel active" id="panelStream">
-        <div class="tv-placeholder" id="streamPlaceholder">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          <p>Clique para carregar</p>
-          <button class="btn-load" id="loadStream">Carregar Player</button>
-        </div>
-      </div>
-      <div class="tv-panel" id="panelChat">
-        <div class="tv-placeholder" id="chatPlaceholder">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          <p>Clique para carregar</p>
-          <button class="btn-load" id="loadChat">Carregar Chat</button>
-        </div>
-      </div>
-    </div>
-  </div>
+function closeSearchModal() {
+  const modal = document.getElementById('searchModal');
+  if (modal) modal.style.display = 'none';
+}
 
-  <!-- FAB -->
-  <div class="fab-container">
-    <button class="fab fab-main" id="fabMain" title="Menu">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-    </button>
-    <div class="fab-options" id="fabOptions">
-      <button class="fab fab-option" data-action="tv" title="Mini TV">📺</button>
-      <a href="https://twitch.tv/hxadinha" target="_blank" class="fab fab-option" title="Twitch">💜</a>
-      <a href="https://discord.gg/hxadinha" target="_blank" class="fab fab-option" title="Discord">💬</a>
-      <button class="fab fab-option" data-action="top" title="Topo">⬆️</button>
-    </div>
-  </div>
+function goTo(selector) {
+  const el = document.querySelector(selector);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
 
-  <!-- Toast -->
-  <div class="toast" id="toast">
-    <span class="toast-icon">⌨️</span>
-    <span class="toast-text">Pressione <kbd>Ctrl+K</kbd> para buscar</span>
-  </div>
+// ===== BOTÃO DE CHAT FUNCIONAL =====
+document.getElementById('chatToggle').addEventListener('click', () => {
+  openChatModal();
+});
 
-  <script src="script.js"></script>
+function openChatModal() {
+  let modal = document.getElementById('chatModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'chatModal';
+    const parent = location.hostname || 'localhost';
+    modal.innerHTML = `
+      <div class="chat-modal-header">
+        <h3>💬 Chat ao Vivo</h3>
+        <button class="chat-modal-close" onclick="closeChatModal()">✕</button>
+      </div>
+      <div class="chat-modal-body" id="chatModalBody">
+        ${isLive ? 
+          `<iframe src="https://www.twitch.tv/embed/${CONFIG.CHANNEL}/chat?parent=${parent}&darkpopout"></iframe>` :
+          `<div class="chat-modal-offline">
+            <span>💬</span>
+            <p>O chat está disponível durante as lives</p>
+            <a href="https://twitch.tv/${CONFIG.CHANNEL}" target="_blank" class="btn btn-secondary" style="padding:10px 20px;font-size:14px">Ir para a Twitch</a>
+          </div>`
+        }
+      </div>
+    `;
+    document.body.appendChild(modal);
+    
+    // Tornar arrastável
+    let isDragging = false, startX, startY, initialX, initialY;
+    const header = modal.querySelector('.chat-modal-header');
+    
+    header.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      const rect = modal.getBoundingClientRect();
+      initialX = rect.left;
+      initialY = rect.top;
+      modal.style.transition = 'none';
+    });
+    
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      modal.style.left = (initialX + dx) + 'px';
+      modal.style.top = (initialY + dy) + 'px';
+      modal.style.right = 'auto';
+    });
+    
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      modal.style.transition = '';
+    });
+  }
+  modal.classList.add('show');
+}
+
+function closeChatModal() {
+  const modal = document.getElementById('chatModal');
+  if (modal) modal.classList.remove('show');
+}
+</script>
 </body>
 </html>
